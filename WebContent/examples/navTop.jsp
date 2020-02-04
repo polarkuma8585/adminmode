@@ -26,20 +26,22 @@ The above copyright notice and this permission notice shall be included in all c
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <script src="https://kit.fontawesome.com/466f6d08a6.js" crossorigin="anonymous"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     	남빵 프로젝트 관리자 모드
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />  
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!-- CSS Files -->
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+  
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
-  
+    <decorator:head />
   </head>
 
 <body class="">
@@ -245,14 +247,13 @@ The above copyright notice and this permission notice shall be included in all c
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link btn-rotate" href="#pablo">
+                <a class="nav-link btn-rotate" href="">                
                   <i class="nc-icon nc-circle-10"></i>
                   <p>
-                    <span class="d-lg-none d-md-block">Account</span>
-                  </p>
-                </a>
-              </li>
-              
+                    <span class="d-md-block">Account</span>
+                  </p>                
+                </a>                
+              </li>              
             </ul>
           </div>
         </div>
@@ -262,8 +263,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 <div> Contents -->
       <div class="content">
-
-      
+			<decorator:body /> <!--  view page가 끼워질 위치  -->
       </div>
       
       <footer class="footer footer-black  footer-white ">
