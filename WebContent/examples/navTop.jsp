@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">  
   <script src="https://kit.fontawesome.com/466f6d08a6.js" crossorigin="anonymous"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
@@ -47,7 +47,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="active">
-            <a href="">
+            <a href="adminMain.jsp">
               <i class="nc-icon nc-laptop"></i>
               <p>대시보드</p>
             </a>
@@ -59,8 +59,8 @@
             </a>
             <div class="collapse" id="merchList">
         		<ul class="nav">
-        			<li style=>
-		          	  <a href="">
+        			<li>
+		          	  <a href="merchList.jsp">
 		              <i class="nc-icon nc-cart-simple"></i>
 		              <p>상품목록관리</p>
 			          </a>
