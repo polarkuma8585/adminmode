@@ -26,10 +26,10 @@
 							<div class="row" > <!-- 첫라인 시작 -->
 								<div class="col-md-2"> <!--  style="border:1px solid black" -->
 									<div class="form-group">
-										<label>상품 종류</label>
+										<label>검색어 분류</label>
 										<select class="form-control" style="padding:5px 5px;">
 											<option selected>상품명</option>
-											<option value="">상호명</option>
+											<option value="">상품ID</option>
 											<option value="">상호명</option>
 											<option value="">상호명</option>
 										</select>
@@ -53,14 +53,15 @@
 									<div class="form-group">
 									<label>기간 선택</label><br>									
 									<div class="btn-group btn-group-sm" role="group" aria-label="dateSelect">										
-											<button type="button" class="btn btn-primary">오늘</button>
-											<button type="button" class="btn btn-primary">1일</button>
+											<button type="button" class="btn btn-primary">오늘</button>											
 											<button type="button" class="btn btn-primary">3일</button>
 											<button type="button" class="btn btn-primary">7일</button>
 											<button type="button" class="btn btn-primary">1개월</button>
 											<button type="button" class="btn btn-primary">3개월</button>
 											<button type="button" class="btn btn-primary">6개월</button>
 											<button type="button" class="btn btn-primary">1년</button>
+											<button type="button" class="btn btn-primary">3년</button>
+											<button type="button" class="btn btn-primary">6년</button>
 											<button type="button" class="btn btn-primary">전체</button>
 									</div>
 									</div>
@@ -200,7 +201,7 @@
 				</div>
 				<div class="card-body">
 					 <div class="table-responsive">
-		                  <table class="table">
+		                  <table class="table table-striped table-hover table-condensed">
 		                    <thead class=" text-primary">
 		                      <th>
 		                        Name
