@@ -7,29 +7,96 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="row">
+	<div class="row ">
+		<div class="col-md-12">
+			<div class="row" style="padding: 0 30px">
+			<div class="col-md-6 "></div>
+			<div class="col-md-3 ">				
+				<div class="card card-stats">
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i class="nc-icon nc-bookmark-2 text-danger"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <div class="numbers">
+                      <p class="card-category">취소신청</p>
+                      <p class="card-title">총 0건 <br>0원
+                        <p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                  <i class="fa fa-clock-o"></i> In the last hour
+                </div>
+              </div>
+            </div>
+			</div>					
+			<div class="col-md-3">
+					<div class="card card-stats">
+	              <div class="card-body ">
+	                <div class="row">
+	                  <div class="col-5 col-md-4">
+	                    <div class="icon-big text-center icon-warning">
+	                      <i class="nc-icon nc-box-2 text-primary"></i>
+	                    </div>
+	                  </div>
+	                  <div class="col-7 col-md-8">
+	                    <div class="numbers">
+	                      <p class="card-category">환불</p>
+	                      <p class="card-title">총 0건 <br> 0원
+	                        <p>
+	                    </div>
+	                  </div>
+	                </div>
+	              </div>
+	              <div class="card-footer ">
+	                <hr>
+	                <div class="stats">
+	                  <i class="fa fa-refresh"></i> Update now
+	                </div>
+	              </div>
+	            </div>
+	          </div>	
+			</div>
+		</div>
+		</div>
 		<div class="col-md-12">
 			<div class="col-md-12">
 				<form id="frm" name="frm">
 				<div class="card">
 					<div class="card-header">
-						<h6 class="card-title">
-							상품 목록 검색
-						</h6>
-						<hr>
+						<h4 class="card-title">취소 환불 검색</h4>
+						<ul class="nav nav-tabs">
+						  <li class="nav-item">
+						    <a class="nav-link" href="cancel.jsp">취소</a>
+						  </li>
+						  <li class="nav-item">
+						    <a class="nav-link active" href="#">환불</a>
+						  </li>
+						  
+						</ul>
 					</div>
 					<div class="card-body"> <!-- 첫번째 카드 바디 시작 -->
 						<div class="row ">
 							<div class="col-md-1 row-st">검색어</div> 
-							<div class="col-md-1 row-st">
+							<div class="col-md-2 row-st">
 								<select class="form-control row-st">
-									<option selected >상품명</option>
-									<option>상품id</option>
-									<option>주문id</option>
-									<option>판매id</option>
+									<option selected >주문번호</option>
+									<option>결제번호</option>
+									<option>회원ID</option>
+									
+									<option>상품번호</option>
+									<option>상품명</option>
+									<option>판매번호</option>
 								</select>
 							</div> 
-							<div class="col-md-9 row-st">
+							<div class="col-md-8 row-st">
 								<input type="text" class="form-control">
 							</div> 
 							
@@ -62,31 +129,29 @@
 							</div>
 						</div>	<!-- 둘째라인 끝 -->
 						<div class="row ">
-							<div class="col-md-1 row-st">등록시간</div>
-							<div class="col-md-2 row-st">
-								<select class="form-control" style="width:150px">
-											<option selected>시간 선택</option>
-											<option></option>
-											<option></option>
-											<option></option>
-											<option></option>										
+							<div class="col-md-1 row-st">상품</div> 
+							<div class="col-md-1 row-st">
+								<select class="form-control row-st">
+									<option selected >상품명</option>
+									<option>상품번호</option>
+									<option>주문번호</option>
+									<option>판매번호</option>
 								</select>
+							</div> 
+							<div class="col-md-9 row-st">
+								<input type="text" class="form-control">
+							</div> 
+							
+							<div class="col-md-1 row-st">
+								<div class="form-group">
+								<button type="button" class="btn btn-primary btn-sm">+</button>
+								<button type="button" class="btn btn-primary btn-sm">-</button>
+								</div>
 							</div>
-							<div class="col-md-3 row-st"></div>
-							<div class="col-md-1 row-st">판매종료시간</div>
-							<div class="col-md-2 row-st">
-								<select class="form-control" style="width:150px">
-										<option selected>시간 선택</option>
-										<option></option>
-										<option></option>
-										<option></option>
-										<option></option>
-								</select>
-							</div>
-							<div class="col-md-3 row-st"></div>
 						</div><!-- 셋째라인 끝 -->
+						
 						<div class="row ">
-							<div class="col-md-1 row-st">판매상태</div>
+							<div class="col-md-1 row-st">환불상태</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
 								  <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -96,35 +161,17 @@
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
 								  <input type="checkbox" class="custom-control-input" id="customCheck2">
-								  <label class="custom-control-label" for="customCheck2">판매중</label>
+								  <label class="custom-control-label" for="customCheck2">환불신청</label>
 								</div>
 
 							</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
 								  <input type="checkbox" class="custom-control-input" id="customCheck3">
-								  <label class="custom-control-label" for="customCheck3">판매중단</label>
+								  <label class="custom-control-label" for="customCheck3">환불완료</label>
 								</div>
 							</div>
-							<div class="col-md-1 row-st">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck4">
-								  <label class="custom-control-label" for="customCheck4">판매완료</label>
-								</div>
-							</div>
-							<div class="col-md-1 row-st">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck5">
-								  <label class="custom-control-label" for="customCheck5">부분판매</label>
-								</div>
-							</div>
-							<div class="col-md-1 row-st">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck6">
-								  <label class="custom-control-label" for="customCheck6">완전판매</label>
-								</div>
-
-							</div>
+							
 						</div><!-- 넷째라인 끝 -->
 					</div>						 
 					<div class="card-footer">						
@@ -154,7 +201,7 @@
 									<option>등록일 역순</option>
 									<option>주문번호순</option>
 									<option>상품명 순</option>
-									<option>상품ID순</option>
+									<option>상품번호순</option>
 								</select>								
 							</div>
 							<div class="col-2 row-st">
@@ -167,17 +214,13 @@
 						</div>
 						<div class="row">
 							<div class="col-md-1 row-st text-center">
-								<button type="button" class="btn btn-warning btn-sm">삭제</button>
+								
 							</div>
 							<div class="col-md-1 row-st text-center">
-								<button type="button" class="btn btn-danger btn-sm">판매취소</button>
+								
 							</div>
 							<div class="col-md-2 row-st">
-								<select class="form-control">
-									<option selected>메인노출여부 </option>
-									<option>노출</option>
-									<option>비노출</option>															
-								</select>	
+								
 							</div>
 							<div class="col-md-7 row-st"></div>
 							<div class="col-md-1 row-st">
@@ -198,28 +241,37 @@
 								  </div>							
 		                      </th>
 		                      <th>
-		                        	상품명
+		                        	주문일
 		                      </th>
 		                      <th>
-		                        	상품등록일
+		                        	주문번호
 		                      </th>
 		                      <th>
-		                        	상품가격
+		                        	구매수량
 		                      </th>
 		                      <th>
-		                        	상품판매상태
+		                        	구매자 ID
 		                      </th>
 		                      <th>
-		                      		상품 등록일
+		                      		상품명
 		                      </th>
 		                      <th>
-		                      		상품 판매일
+		                      		결제 금액
 		                      </th>
 		                      <th>
-		                      		상품등록시간
+		                      		결제 수단
 		                      </th>
 		                      <th>
-		                      		상품판매종료시간
+		                      		결제 상태
+		                      </th>
+		                      <th>
+		                      		환불 상태
+		                      </th>		                     
+		                      <th>
+		                      		환불 시간
+		                      </th>
+		                      <th>
+		                      		환불 사유
 		                      </th>
 		                    </thead>
 		                    <tbody>

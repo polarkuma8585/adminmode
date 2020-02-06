@@ -25,6 +25,8 @@
   
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="../assets/css/NewCSS.css" rel="stylesheet" />
+  
     <decorator:head />
   </head>
 
@@ -76,13 +78,13 @@
              <div class="collapse" id="pay">
         		<ul class="nav">
         			<li style=>
-		          	  <a href="">
+		          	  <a href="setleManage.jsp">
 		              <i class="nc-icon nc-credit-card"></i>
 		              <p>전체 결제 관리</p>
 			          </a>
                    </li>
                    <li style=>
-		          	  <a href="">
+		          	  <a href="cancel.jsp">
 		              <i class="nc-icon nc-credit-card"></i>
 		              <p>취소 / 환불</p>
 			          </a>
@@ -98,7 +100,7 @@
             <div class="collapse" id="user">
         		<ul class="nav">
         			<li style=>
-		          	  <a href="">
+		          	  <a href="userManage.jsp">
 		              <i class="nc-icon nc-single-02"></i>
 		              <p>사용자 관리</p>
 			          </a>
