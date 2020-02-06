@@ -116,7 +116,7 @@
             <div class="collapse" id="seller">
         		<ul class="nav">
         			<li style=>
-		          	  <a href="">
+		          	  <a href="sellerManage.jsp">
 		              <i class="nc-icon nc-shop"></i>
 		              <p>판매자 관리</p>
 			          </a>
@@ -192,7 +192,7 @@
     </div>
     <div class="main-panel">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent ">      
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-toggle">

@@ -13,29 +13,29 @@
 			<div class="col-md-6 "></div>
 			<div class="col-md-3 ">				
 				<div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-bookmark-2 text-danger"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">취소신청</p>
-                      <p class="card-title">총 0건 <br>0원
-                        <p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                  <i class="fa fa-clock-o"></i> In the last hour
-                </div>
-              </div>
-            </div>
+	              <div class="card-body ">
+	                <div class="row">
+	                  <div class="col-5 col-md-4">
+	                    <div class="icon-big text-center icon-warning">
+	                      <i class="nc-icon nc-bookmark-2 text-danger"></i>
+	                    </div>
+	                  </div>
+	                  <div class="col-7 col-md-8">
+	                    <div class="numbers">
+	                      <p class="card-category">취소신청</p>
+	                      <p class="card-title">총 0건 <br>0원
+	                        <p>
+	                    </div>
+	                  </div>
+	                </div>
+	              </div>
+	              <div class="card-footer ">
+	                <hr>
+	                <div class="stats">
+	                  <i class="fa fa-clock-o"></i> In the last hour
+	                </div>
+	              </div>
+	            </div>
 			</div>					
 			<div class="col-md-3">
 					<div class="card card-stats">
@@ -69,7 +69,7 @@
 		<div class="col-md-12">
 			<div class="col-md-12">
 				<form id="frm" name="frm">
-				<div class="card">
+				<div class="card" id="card1">
 					<div class="card-header">
 						<h4 class="card-title">취소 환불 검색</h4>
 						<ul class="nav nav-tabs">
@@ -86,11 +86,10 @@
 						<div class="row ">
 							<div class="col-md-1 row-st">검색어</div> 
 							<div class="col-md-2 row-st">
-								<select class="form-control row-st">
+								<select class="custom-select">
 									<option selected >주문번호</option>
 									<option>결제번호</option>
-									<option>회원ID</option>
-									
+									<option>회원ID</option>									
 									<option>상품번호</option>
 									<option>상품명</option>
 									<option>판매번호</option>
@@ -130,15 +129,15 @@
 						</div>	<!-- 둘째라인 끝 -->
 						<div class="row ">
 							<div class="col-md-1 row-st">상품</div> 
-							<div class="col-md-1 row-st">
-								<select class="form-control row-st">
+							<div class="col-md-2 row-st">
+								<select class="custom-select">
 									<option selected >상품명</option>
 									<option>상품번호</option>
 									<option>주문번호</option>
 									<option>판매번호</option>
 								</select>
 							</div> 
-							<div class="col-md-9 row-st">
+							<div class="col-md-8 row-st">
 								<input type="text" class="form-control">
 							</div> 
 							
@@ -196,7 +195,7 @@
 							<div class="col-7">								
 							</div>
 							<div class="col-2 row-st">
-								<select class="form-control">
+								<select class="custom-select">
 									<option selected>등록일순</option>
 									<option>등록일 역순</option>
 									<option>주문번호순</option>
@@ -205,7 +204,7 @@
 								</select>								
 							</div>
 							<div class="col-2 row-st">
-								<select class="form-control">
+								<select class="custom-select">
 									<option selected>10개씩보기</option>
 									<option>20개씩보기</option>
 									<option>30개씩보기</option>															

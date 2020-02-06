@@ -69,7 +69,7 @@
 		<div class="col-md-12">
 			<div class="col-md-12">
 				<form id="frm" name="frm">
-				<div class="card">
+				<div class="card" id="card1">
 					<div class="card-header">
 						<h4 class="card-title">취소 환불 검색</h4>
 						<ul class="nav nav-tabs">
@@ -78,15 +78,14 @@
 						  </li>
 						  <li class="nav-item">
 						    <a class="nav-link" href="refund.jsp">환불</a>
-						  </li>
-						  
-						</ul>
+						  </li>						  
+						</ul>									
 					</div>
 					<div class="card-body"> <!-- 첫번째 카드 바디 시작 -->
 						<div class="row ">
 							<div class="col-md-1 row-st">검색어</div> <!-- 첫줄끝 -->
 							<div class="col-md-2 row-st">
-								<select class="form-control row-st">
+								<select class="custom-select ">
 									<option selected >주문번호</option>
 									<option>결제번호</option>
 									<option>회원ID</option>
@@ -108,8 +107,8 @@
 							</div>
 							
 						</div> <!-- 첫줄끝 -->
-						<div class="row ">
-							<div class="col-md-1 row-st">검색기간</div>
+						<div class="row">
+							<div class="col-md-1 row-st"><p class="mt-2 pt-1">검색기간</p></div>
 							<div class="col-md-6 row-st">
 								<button type="button" class="btn btn-primary btn-sm">오늘</button>											
 											<button type="button" class="btn btn-primary btn-sm">3일</button>
@@ -130,15 +129,15 @@
 						</div>	<!-- 둘째라인 끝 -->
 						<div class="row ">
 							<div class="col-md-1 row-st">상품</div> 
-							<div class="col-md-1 row-st">
-								<select class="form-control row-st">
+							<div class="col-md-2 row-st">
+								<select class="custom-select">
 									<option selected >상품명</option>
-									<option>상품id</option>
-									<option>주문id</option>
-									<option>판매id</option>
+									<option>상품번호</option>
+									<option>주문번호</option>
+									<option>판매번호</option>
 								</select>
 							</div> 
-							<div class="col-md-9 row-st">
+							<div class="col-md-8 row-st">
 								<input type="text" class="form-control">
 							</div> 
 							
@@ -226,7 +225,7 @@
 							<div class="col-7">								
 							</div>
 							<div class="col-2 row-st">
-								<select class="form-control">
+								<select class="custom-select">
 									<option selected>등록일순</option>
 									<option>등록일 역순</option>
 									<option>주문번호순</option>
@@ -235,7 +234,7 @@
 								</select>								
 							</div>
 							<div class="col-2 row-st">
-								<select class="form-control">
+								<select class="custom-select">
 									<option selected>10개씩보기</option>
 									<option>20개씩보기</option>
 									<option>30개씩보기</option>															

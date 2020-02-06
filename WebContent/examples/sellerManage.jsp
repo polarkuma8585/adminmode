@@ -13,15 +13,35 @@
 			
 			<div class="col-md-12">
 				<form id="frm" name="frm" class="form-horizontal">
-				<div class="card">
-					<div class="card-header">
-						
+				<div class="card" id="card2">
+					<div class="card-header">						
 						<h6 class="card-title">
-							사용자 관리
+							판매자 관리
 						</h6>
 						<hr>
 					</div>
 					<div class="card-body"> <!-- 첫번째 카드 바디 시작 -->
+						<div class="row">
+							<div class="col-md-1 row-st">조회 분류</div>
+							<div class="col-md-1 row-st">
+								<div class="custom-control custom-checkbox">
+								  <input type="checkbox" class="custom-control-input" id="customCheck1">
+								  <label class="custom-control-label" for="customCheck1">전체</label>
+								</div>
+							</div>
+							<div class="col-md-1 row-st">
+								<div class="custom-control custom-checkbox">
+								  <input type="checkbox" class="custom-control-input" id="customCheck1">
+								  <label class="custom-control-label" for="customCheck1">취소신청내역</label>
+								</div>
+							</div>
+							<div class="col-md-1 row-st">
+								<div class="custom-control custom-checkbox">
+								  <input type="checkbox" class="custom-control-input" id="customCheck1">
+								  <label class="custom-control-label" for="customCheck1">탈퇴 신청</label>
+								</div>
+							</div>
+						</div>
 						<div class="row">
 							<div class=" col-md-1 row-st ">검색어</div> <!-- 첫줄끝 -->
 							<div class="col-md-2 row-st">
@@ -104,7 +124,7 @@
 							<div class="col-md-2 row-st">
 								<input type="text" class="form-control" style="width:150px" readonly>
 							</div>
-							<div class="col-md-1 row-st">~</div>
+							<div class="col-md-1 row-st text-center"><h3 class="h3">~</h3></div>
 							<div class="col-md-2 row-st">
 								<input type="text" class="form-control" style="width:150px" readonly>
 							</div>
@@ -164,8 +184,8 @@
 							</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="over50">
-								  <label class="custom-control-label" for="over50">50대 이상</label>
+								  <input type="checkbox" class="custom-control-input" id="age51">
+								  <label class="custom-control-label" for="age51">50대 이상</label>
 								</div>
 							</div>
 						</div><!-- 넷째라인 끝 -->
@@ -192,7 +212,7 @@
 							<div class="col-7">								
 							</div>
 							<div class="col-2 row-st">
-								<select class="custom-select">
+								<select class="custom-select custom-select-sm">
 									<option selected>등록일순</option>
 									<option>등록일 역순</option>
 									<option>주문번호순</option>
@@ -201,7 +221,7 @@
 								</select>								
 							</div>
 							<div class="col-2 row-st">
-								<select class="custom-select">
+								<select class="custom-select custom-select-sm">
 									<option selected>10개씩보기</option>
 									<option>20개씩보기</option>
 									<option>30개씩보기</option>															
@@ -210,7 +230,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-2 row-st text-center">
-								<select class="custom-select">
+								<select class="custom-select custom-select-sm mt-2">
 									<option selected>상태 변경</option>
 									<option>일반</option>
 									<option>징계</option>
@@ -219,10 +239,10 @@
 								</select>
 							</div>
 							
-							<div class="col-md-2 row-st">
+							<div class="col-md-1 row-st">
 								<button type="button" class="btn btn-danger btn-sm">적용</button>
 							</div>
-							<div class="col-md-7 row-st"></div>
+							<div class="col-md-8 row-st"></div>
 							<div class="col-md-1 row-st">
 								<button type="button" class="btn btn-success btn-sm">엑셀다운로드</button>
 							</div>
