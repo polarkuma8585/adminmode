@@ -37,7 +37,7 @@
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="" class="simple-text logo-mini"> <!-- 좌상단 로고 링크 -->
           <div class="logo-image-small">
             <img src=""> <!-- 로고 이미지 -->
           </div>
@@ -132,13 +132,13 @@
             <div class="collapse" id="mlg">
         		<ul class="nav">
         			<li style=>
-		          	  <a href="">
+		          	  <a href="mlgManage.jsp">
 		              <i class="nc-icon nc-money-coins"></i>
 		              <p>마일리지 관리</p>
 			          </a>
                    </li>
                    <li style=>
-		          	  <a href="">
+		          	  <a href="mlgEstbs.jsp">
 		              <i class="nc-icon nc-money-coins"></i>
 		              <p>마일리지 설정 관리</p>
 			          </a>
@@ -154,7 +154,7 @@
             <div class="collapse" id="bbs">
         		<ul class="nav">
         			<li style=>
-		          	  <a href="">
+		          	  <a href="bbs_NoticeManage.jsp">
 		              <i class="nc-icon nc-tile-56"></i>
 		              <p>게시물 관리</p>
 			          </a>

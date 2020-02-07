@@ -13,7 +13,7 @@
 			
 			<div class="col-md-12">
 				<form id="frm" name="frm" class="form-horizontal">
-				<div class="card" id="card2">
+				<div class="card" id="card1-cell">
 					<div class="card-header">						
 						<h6 class="card-title">
 							판매자 관리
@@ -22,36 +22,40 @@
 					</div>
 					<div class="card-body"> <!-- 첫번째 카드 바디 시작 -->
 						<div class="row">
-							<div class="col-md-1 row-st">조회 분류</div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-1">조회 분류</div>
+							<div class="col-md-1">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck1">
-								  <label class="custom-control-label" for="customCheck1">전체</label>
+								  <input type="checkbox" class="custom-control-input" id="all">
+								  <label class="custom-control-label" for="all">전체</label>
 								</div>
 							</div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-1">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck1">
-								  <label class="custom-control-label" for="customCheck1">취소신청내역</label>
+								  <input type="checkbox" class="custom-control-input" id="cancel">
+								  <label class="custom-control-label" for="cancel">취소신청내역</label>
 								</div>
 							</div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-1">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck1">
-								  <label class="custom-control-label" for="customCheck1">탈퇴 신청</label>
+								  <input type="checkbox" class="custom-control-input" id="out">
+								  <label class="custom-control-label" for="out">탈퇴 신청</label>
 								</div>
 							</div>
 						</div>
 						<div class="row">
-							<div class=" col-md-1 row-st ">검색어</div> <!-- 첫줄끝 -->
-							<div class="col-md-2 row-st">
-								<input type="text" class="form-control " value="사용자ID" readonly>
+							<div class=" col-md-1 row-st ">검색어</div>
+							<div class="col-md-2">
+								<select class="custom-select">
+									<option>판매자ID</option>
+									<option>판매번호</option>
+									<option>상품번호</option>									
+								</select>
 							</div> 
-							<div class="col-md-8 row-st">
+							<div class="col-md-8">
 								<input type="text" class="form-control ">
 							</div> 
 							
-							<div class="col-md-1 row-st">
+							<div class="col-md-1">
 								<div class="form-group">
 								<button type="button" class="btn btn-primary btn-sm">+</button>
 								<button type="button" class="btn btn-primary btn-sm">-</button>
@@ -60,48 +64,48 @@
 							
 						</div> <!-- 첫줄끝 -->
 						<div class="row ">							
-							<div class="col-md-1 row-st">사용자 상태</div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-1">판매자 상태</div>
+							<div class="col-md-1">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck1">
-								  <label class="custom-control-label" for="customCheck1">전체</label>
+								  <input type="checkbox" class="custom-control-input" id="sellerAll">
+								  <label class="custom-control-label" for="sellerAll">전체</label>
 								</div>
 							</div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-1">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck1">
-								  <label class="custom-control-label" for="customCheck1">일반</label>
+								  <input type="checkbox" class="custom-control-input" id="sellerNormal">
+								  <label class="custom-control-label" for="sellerNormal">일반</label>
 								</div>
 							</div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-1">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck1">
-								  <label class="custom-control-label" for="customCheck1">휴면</label>
+								  <input type="checkbox" class="custom-control-input" id="sellerSleep">
+								  <label class="custom-control-label" for="sellerSleep">휴면</label>
 								</div>
 							</div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-1">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck1">
-								  <label class="custom-control-label" for="customCheck1">완료</label>
+								  <input type="checkbox" class="custom-control-input" id="sellerOut">
+								  <label class="custom-control-label" for="sellerOut">탈퇴</label>
 								</div>
 							</div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-1">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck1">
-								  <label class="custom-control-label" for="customCheck1">징계</label>
+								  <input type="checkbox" class="custom-control-input" id="sellerPunish">
+								  <label class="custom-control-label" for="sellerPunish">징계</label>
 								</div>
 							</div>
-							<div class="col-md-1 row-st">주문상품</div>
-							<div class="col-md-2 row-st">
+							<div class="col-md-1 ">판매상품</div>
+							<div class="col-md-2 ">
 								<input type="text" class="form-control">
 							</div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-1 ">
 								<button type="button" class="btn btn-primary btn-sm">상품 검색</button>
 							</div>
 						</div>	<!-- 둘째라인 끝 -->
 						<div class="row ">
-							<div class="col-md-1 row-st">구매금액 / 건수</div>
-							<div class="col-md-2 row-st">							
+							<div class="col-md-1 ">판매금액 / 건수</div>
+							<div class="col-md-2 ">							
 								<select class="custom-select">									
 									<option selected>전체</option>
 									<option>구매금액</option>
@@ -109,27 +113,23 @@
 								</select>								
 							</div>
 							<div class="col-md-3"></div>
-							<div class="col-md-1 row-st">가입일 / 기념일</div>
-							<div class="col-md-2 row-st">
-								<select class="custom-select">
-									<option selected>전체</option>
-									<option>가입일</option>
-									<option>기념일</option>
-								</select>
+							<div class="col-md-1 ">가입일</div>
+							<div class="col-md-2 ">
+								<input type="date" class="form-control">
 							</div>
 							<div class="col-md-3"></div>
 						</div>
 						<div class="row">
-							<div class="col-md-1 row-st">주문일</div>
-							<div class="col-md-2 row-st">
+							<div class="col-md-1 ">판매일</div>
+							<div class="col-md-2 ">
 								<input type="text" class="form-control" style="width:150px" readonly>
 							</div>
-							<div class="col-md-1 row-st text-center"><h3 class="h3">~</h3></div>
-							<div class="col-md-2 row-st">
+							<div class="col-md-1 text-center"><h3 class="h3">~</h3></div>
+							<div class="col-md-2 ">
 								<input type="text" class="form-control" style="width:150px" readonly>
 							</div>
-							<div class="col-md-1 row-st">주문시간</div>
-							<div class="col-md-2 row-st">
+							<div class="col-md-1 ">판매시간</div>
+							<div class="col-md-2 ">
 								<select class="custom-select ">
 												<option selected>시간 선택</option>
 												<option>13:00</option>
@@ -142,59 +142,13 @@
 												<option>20:00</option>
 								</select>
 							</div>
-						</div>
-						<div class="row ">
-							<div class="col-md-1 row-st">나이대</div>
-							<div class="col-md-1 row-st">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="ageAll">
-								  <label class="custom-control-label" for="ageAll">전체</label>
-								</div>
-							</div>
-							<div class="col-md-1 row-st">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="age10">
-								  <label class="custom-control-label" for="age10">10대</label>
-								</div>
-
-							</div>
-							<div class="col-md-1 row-st">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="age20">
-								  <label class="custom-control-label" for="age20">20대</label>
-								</div>
-							</div>
-							<div class="col-md-1 row-st">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="age30">
-								  <label class="custom-control-label" for="age30">30대</label>
-								</div>
-							</div>
-							<div class="col-md-1 row-st">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="age40">
-								  <label class="custom-control-label" for="age40">40대</label>
-								</div>
-							</div>
-							<div class="col-md-1 row-st">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="age50">
-								  <label class="custom-control-label" for=age50>50대</label>
-								</div>
-							</div>
-							<div class="col-md-1 row-st">
-								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="age51">
-								  <label class="custom-control-label" for="age51">50대 이상</label>
-								</div>
-							</div>
-						</div><!-- 넷째라인 끝 -->
+						</div>						
 					</div>						 
 					<div class="card-footer">						
 					<hr>
 						<div class="col-md-12 text-center">
 								<button type="submit" class="btn btn-primary">검색</button>&nbsp;
-								<button type="reset" class="btn btn-primary">취소</button>
+								<button type="reset" class="btn btn-primary">초기화</button>
 						</div>
 					</div>
 				</div>
@@ -203,7 +157,7 @@
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-12">
-				<div class="card">
+				<div class="card" id="card2-cell">
 					<div class="card-header">
 						<div class="row">
 							<div class="col-1 row-st text-center">
@@ -211,7 +165,7 @@
 							</div>
 							<div class="col-7">								
 							</div>
-							<div class="col-2 row-st">
+							<div class="col-2 ">
 								<select class="custom-select custom-select-sm">
 									<option selected>등록일순</option>
 									<option>등록일 역순</option>
@@ -220,7 +174,7 @@
 									<option>상품ID순</option>
 								</select>								
 							</div>
-							<div class="col-2 row-st">
+							<div class="col-2 ">
 								<select class="custom-select custom-select-sm">
 									<option selected>10개씩보기</option>
 									<option>20개씩보기</option>
@@ -229,7 +183,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-2 row-st text-center">
+							<div class="col-md-2 text-center">
 								<select class="custom-select custom-select-sm mt-2">
 									<option selected>상태 변경</option>
 									<option>일반</option>
@@ -238,12 +192,18 @@
 									<option>탈퇴</option>
 								</select>
 							</div>
-							
-							<div class="col-md-1 row-st">
+							<div class="col-md-2">
+								<select class="custom-select custom-select-sm mt-2">
+									<option selected>판매취소 승인 여부</option>
+									<option>승인</option>
+									<option>비승인</option>									
+								</select>
+							</div>
+							<div class="col-md-1">
 								<button type="button" class="btn btn-danger btn-sm">적용</button>
 							</div>
-							<div class="col-md-8 row-st"></div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-6"></div>
+							<div class="col-md-1 ">
 								<button type="button" class="btn btn-success btn-sm">엑셀다운로드</button>
 							</div>
 						</div>
@@ -254,35 +214,35 @@
 						<div class="table-responsive" style="overflow:hidden;">
 		                  <table class="table table-hover table-condensed">
 		                    <thead class="text-primary">
-		                      <th>		                      	
+		                      <th class="text-center">		                      	
 								  <div class="custom-control custom-checkbox">
 									  <input type="checkbox" class="custom-control-input" id="resultChkAll">
 									  <label class="custom-control-label" for="resultChkAll"></label>
 								  </div>							
 		                      </th>
 		                      <th>
-		                        	주문일
+		                        	판매자 ID
 		                      </th>
 		                      <th>
-		                        	주문번호
+		                        	판매자 이름
 		                      </th>
 		                      <th>
-		                        	구매수량
+		                        	가입일
 		                      </th>
 		                      <th>
-		                        	구매자 ID
+		                        	연락처
 		                      </th>
 		                      <th>
-		                      		상품명
+		                      		판매자상태
 		                      </th>
 		                      <th>
-		                      		결제 금액
+		                      		주소
 		                      </th>
 		                      <th>
-		                      		결제 수단
+		                      		판매자 상세 내용
 		                      </th>
 		                      <th>
-		                      		결제 상태
+		                      		신청 내용
 		                      </th>
 		                    </thead>
 		                    <tbody>

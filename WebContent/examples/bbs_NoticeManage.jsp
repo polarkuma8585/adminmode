@@ -1,0 +1,187 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BBS and Notice Management</title>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card" id="card1-cell">
+			<form id="frm" name="frm">
+				<div class="card-header">
+					<h6 class="card-title">
+							게시판 관리
+					</h6>
+					<hr>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-1">기간</div>
+						<div class="col-md-3">
+							<button type="button" class="btn btn-primary btn-sm">오늘</button>											
+							<button type="button" class="btn btn-primary btn-sm">3일</button>
+							<button type="button" class="btn btn-primary btn-sm">7일</button>
+							<button type="button" class="btn btn-primary btn-sm">1개월</button>																				
+							<button type="button" class="btn btn-primary btn-sm">전체</button>
+						</div>
+						<div class="col-md-2">
+							<input type="text" class="form-control" readonly>							
+						</div>
+						<div class="col-md-1"><p>~</p></div>
+						<div class="col-md-2">
+							<input type="text" class="form-control" readonly>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-1">게시판 선택</div>
+						<div class="col-md-2">
+							<select class="custom-select">
+								<option selected>게시판 선택</option>
+								<option>리뷰</option>
+								<option>공지사항</option>
+							</select>
+						</div>						
+					</div>
+					<div class="row">
+						<div class="col-md-1">답변 상태</div>
+						<div class="col-md-1">
+							<div class="custom-control custom-checkbox">
+								  <input type="checkbox" class="custom-control-input" id="all">
+								  <label class="custom-control-label" for="all">있음</label>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="custom-control custom-checkbox">
+								  <input type="checkbox" class="custom-control-input" id="all">
+								  <label class="custom-control-label" for="all">없음</label>
+							</div>
+						</div>
+						<div class="col-md-3"></div>
+						<div class="col-md-1">댓글 여부</div>
+						<div class="col-md-1">
+							<div class="custom-control custom-checkbox">
+								  <input type="checkbox" class="custom-control-input" id="all">
+								  <label class="custom-control-label" for="all">있음</label>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div class="custom-control custom-checkbox">
+								  <input type="checkbox" class="custom-control-input" id="all">
+								  <label class="custom-control-label" for="all">없음</label>
+							</div>
+						</div>						
+					</div>
+					<div class="row">
+						<div class="col-md-1">게시글 찾기</div>
+						<div class="col-md-2">
+							<select class="custom-select">
+								<option selected>제목</option>
+								<option>내용</option>
+								<option>댓글</option>
+							</select>
+						</div>
+						<div class="col-md-3">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<button type="submit" class="btn btn-primary">검색</button>
+							<button type="reset" class="btn btn-primary">초기화</button>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer">
+				</div>
+				</form>
+			</div>	
+		</div>
+		<div class="col-md-12">
+			<div class="card" id="card1-cell">
+				<div class="card-header">
+					<div class="row">
+						<div class="col-md-4">
+							<h6 class="card-title">
+								[오늘 등록된 새글 N건]&nbsp;
+								[검색 결과 N건]								
+							</h6>								
+						</div>
+						<div class="col-md-4"></div>
+						<div class="col-md-2">
+							<select class="custom-select custom-select-sm">
+									<option selected>기본 정렬</option>
+									<option>등록일순</option>																	
+							</select>
+						</div>
+						<div class="col-md-2">
+							<select class="custom-select custom-select-sm">
+									<option selected>10개씩보기</option>
+									<option>20개씩보기</option>
+									<option>30개씩보기</option>															
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<!-- <button type="submit" class="btn btn-primary btn-sm">답변달기</button> -->
+							<a href="bbsRegist.jsp" class="btn btn-primary btn-sm">답변달기</a>
+							<button type="button" class="btn btn-danger btn-sm">삭제</button>							
+							<a class="btn btn-primary btn-sm" href="">공지등록</a>
+						</div>											
+						<div class="col-md-8"></div>
+						<div class="col-md-1">
+							<button type="submit" class="btn btn-primary btn-sm">엑셀다운로드</button>
+						</div>
+					</div>
+					<hr>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive" style="overflow:hidden;">
+		                  <table class="table table-hover table-condensed">
+		                    <thead class="text-primary text-center">
+		                      <th>		                      	
+								  <div class="custom-control custom-checkbox">
+									  <input type="checkbox" class="custom-control-input" id="resultChkAll">
+									  <label class="custom-control-label" for="resultChkAll"></label>
+								  </div>							
+		                      </th>
+		                      <th>
+		                        	글번호
+		                      </th>
+		                      <th>
+		                        	글분류
+		                      </th>
+		                      <th colspan="3">
+		                        	제목
+		                      </th>
+		                      <th>
+		                        	작성자
+		                      </th>
+		                      <th>
+		                      		작성일
+		                      </th>
+		                      <th>
+		                      		답변상태
+		                      </th>
+		                      <th>
+		                      		조회수
+		                      </th>		                      
+		                    </thead>
+		                    <tbody>
+		                     <tr>
+		                     </tr>		              
+		                    </tbody>
+		                  </table>
+                		</div>
+				</div>
+				<div class="card-footer">
+				</div>
+			</div>
+		</div>	
+	</div>
+</body>
+</html>

@@ -110,7 +110,7 @@
 						<div class="row ">
 							<div class="col-md-1 row-st">검색기간</div>
 							<div class="col-md-6 row-st">
-								<button type="button" class="btn btn-primary btn-sm">오늘</button>											
+											<button type="button" class="btn btn-primary btn-sm">오늘</button>											
 											<button type="button" class="btn btn-primary btn-sm">3일</button>
 											<button type="button" class="btn btn-primary btn-sm">7일</button>
 											<button type="button" class="btn btn-primary btn-sm">1개월</button>
