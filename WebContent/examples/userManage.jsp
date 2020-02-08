@@ -10,6 +10,18 @@
 	
 	<div class="row">
 		<div class="col-md-12">
+			<div class="row">				
+				<div class="col-md-2 ml-3">
+					<nav aria-label="breadcrumb" role="navigation">
+					  <ol class="breadcrumb">
+		    			<li class="breadcrumb-item"><a href="adminMain.jsp">관리자 홈</a></li>
+		    			<li class="breadcrumb-item active" aria-current="page">사용자 관리</li>		    			
+		  			 </ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
 			
 			<div class="col-md-12">
 				<form id="frm" name="frm" class="form-horizontal">
@@ -102,11 +114,23 @@
 						<div class="row">
 							<div class="col-md-1 row-st">주문일</div>
 							<div class="col-md-2 row-st">
-								<input type="text" class="form-control" style="width:150px" readonly>
+								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 							</div>
-							<div class="col-md-1 row-st">~</div>
+							<div class="col-md-1 text-center row-st">~</div>
 							<div class="col-md-2 row-st">
-								<input type="text" class="form-control" style="width:150px" readonly>
+								<!-- <input type="text" class="form-control" id="endDate" style="width:150px"> -->
+								<div class="input-group">								  
+								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 							</div>
 							<div class="col-md-1 row-st">주문시간</div>
 							<div class="col-md-2 row-st">
@@ -276,5 +300,30 @@
 			</div>
 		</div>
 	</div>
+	<script>	
+	 $( "#startDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	/* ,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png"
+	        ,buttonImageOnly: true  */
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });
+	    
+	    $( "#endDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png" 
+	        ,buttonImageOnly: true 
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });			    	    	  
+	</script>
 </body>
 </html>

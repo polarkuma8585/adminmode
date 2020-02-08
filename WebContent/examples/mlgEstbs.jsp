@@ -7,10 +7,22 @@
 <title>마일리지 설정 관리</title>
 </head>
 <body>
-	<form id="frm" name="frm">
-	<div class="row">		
+	<form id="frm" name="frm" method="post" action="">
+	<div class="row">
 		<div class="col-md-12">
-			<div class="card" id="card1-cell">
+			<div class="row">				
+				<div class="col-md-2">
+					<nav aria-label="breadcrumb" role="navigation">
+					  <ol class="breadcrumb">
+		    			<li class="breadcrumb-item"><a href="adminMain.jsp">관리자 홈</a></li>
+		    			<li class="breadcrumb-item active" aria-current="page">마일리지 설정 관리</li>		    			
+		  			 </ol>
+					</nav>
+				</div>
+			</div>
+		</div>		
+		<div class="col-md-12">
+			<div class="card" >
 				<div class="card-header">
 					<h6 class="card-title">마일리지 설정 관리</h6>
 					<hr>										
@@ -58,7 +70,7 @@
 			</div>
 		</div>
 		<div class="col-md-12">
-			<div class="card" id="card1-cell">
+			<div class="card">
 				<div class="card-header">
 					<h6 class="card-title">사용 / 제한 설정</h6>
 					<hr>														

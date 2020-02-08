@@ -23,7 +23,7 @@
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
 <!--                       <i class="nc-icon nc-globe text-warning"></i> -->
-                      <i class="nc-icon nc-cart-simple text-warning"></i>
+                      <i class="fas fa-shopping-cart text-warning"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
@@ -48,7 +48,7 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-money-coins text-success"></i>
+                      <i class="fas fa-cash-register text-success"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
@@ -73,7 +73,7 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-bookmark-2 text-danger"></i>
+                      <i class="fas fa-receipt text-danger"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
@@ -99,7 +99,7 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-box-2 text-primary"></i>
+                      <i class="fas fa-truck-loading text-primary"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
@@ -207,7 +207,7 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="far fa-user text-warning"></i>
+                      <i class="fas fa-user text-warning"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
@@ -259,7 +259,7 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-vector text-danger"></i>
+                      <i class="fas fa-users text-danger"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
@@ -285,7 +285,7 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-favourite-28 text-primary"></i>
+                      <i class="fas fa-user-check text-primary"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
@@ -310,9 +310,10 @@
             <div class="card" >
               <div class="card-header">
                 <h4 class="card-title">공지 사항</h4>
+                <hr>
               </div>
               <div class="card-body">
-                <div class="table-responsive">
+                <div class="table-responsive" style="overflow: hidden">
                   <table class="table">
                     <thead class=" text-primary">
                       <th>

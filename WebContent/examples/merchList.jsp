@@ -5,12 +5,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+  
+
 </head>
 <body>
 	<div class="row">
 		<div class="col-md-12">
+			<div class="row">				
+				<div class="col-md-2 ml-3">
+					<nav aria-label="breadcrumb" role="navigation">
+					  <ol class="breadcrumb">
+		    			<li class="breadcrumb-item"><a href="adminMain.jsp">관리자 홈</a></li>
+		    			<li class="breadcrumb-item active" aria-current="page">상품 목록 관리</li>		    			
+		  			 </ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
 			<div class="col-md-12">
-				<form id="frm" name="frm">
+				<form id="frm" name="frm" method="post" action="">
 				<div class="card">
 					<div class="card-header">
 						<h6 class="card-title">
@@ -22,7 +36,7 @@
 						<div class="row ">
 							<div class="col-md-1 row-st">검색어</div> 
 							<div class="col-md-1 row-st">
-								<select class="form-control row-st">
+								<select class="custom-select row-st">
 									<option selected >상품명</option>
 									<option>상품id</option>
 									<option>주문id</option>
@@ -43,7 +57,7 @@
 						</div> <!-- 첫줄끝 -->
 						<div class="row ">
 							<div class="col-md-1 row-st">검색기간</div>
-							<div class="col-md-6 row-st">
+							<div class="col-md-4 row-st">
 								<button type="button" class="btn btn-primary btn-sm">오늘</button>											
 											<button type="button" class="btn btn-primary btn-sm">3일</button>
 											<button type="button" class="btn btn-primary btn-sm">7일</button>
@@ -53,18 +67,35 @@
 											<button type="button" class="btn btn-primary btn-sm">1년</button>																					
 											<button type="button" class="btn btn-primary btn-sm">전체</button>
 							</div>
-							<div class="col-md-2 row-st">
-								<input type="text" class="form-control" readonly style="width:150px">
+							<!-- datepicker -->
+							<div class="col-md-2 row-st"> 						
+								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>																
 							</div>
-							<div class="col-md-1 row-st">~</div>
-							<div class="col-md-2 row-st">
-								<input type="text" class="form-control" readonly style="width:150px">
+							<span>
+							 ~
+							</span>
+							<!-- datepicker -->
+							<!-- <div class="col-md-1 row-st">~</div> -->
+							<div class="col-md-2 row-st"> 
+								<!-- <input type="text" class="form-control" id="endDate" style="width:150px"> -->
+								<div class="input-group">								  
+								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 							</div>
 						</div>	<!-- 둘째라인 끝 -->
 						<div class="row ">
 							<div class="col-md-1 row-st">등록시간</div>
 							<div class="col-md-2 row-st">
-								<select class="form-control" style="width:150px">
+								<select class="custom-select" style="width:150px">
 											<option selected>시간 선택</option>
 											<option></option>
 											<option></option>
@@ -75,7 +106,7 @@
 							<div class="col-md-3 row-st"></div>
 							<div class="col-md-1 row-st">판매종료시간</div>
 							<div class="col-md-2 row-st">
-								<select class="form-control" style="width:150px">
+								<select class="custom-select" style="width:150px">
 										<option selected>시간 선택</option>
 										<option></option>
 										<option></option>
@@ -140,7 +171,7 @@
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-12">
-				<div class="card">
+				<div class="card" >
 					<div class="card-header">
 						<div class="row">
 							<div class="col-1 row-st text-center">
@@ -149,7 +180,7 @@
 							<div class="col-7">								
 							</div>
 							<div class="col-2 row-st">
-								<select class="form-control">
+								<select class="custom-select">
 									<option selected>등록일순</option>
 									<option>등록일 역순</option>
 									<option>주문번호순</option>
@@ -158,7 +189,7 @@
 								</select>								
 							</div>
 							<div class="col-2 row-st">
-								<select class="form-control">
+								<select class="custom-select">
 									<option selected>10개씩보기</option>
 									<option>20개씩보기</option>
 									<option>30개씩보기</option>															
@@ -166,19 +197,19 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-1 row-st text-center">
-								<button type="button" class="btn btn-warning btn-sm">삭제</button>
-							</div>
-							<div class="col-md-1 row-st text-center">
-								<button type="button" class="btn btn-danger btn-sm">판매취소</button>
-							</div>
-							<div class="col-md-2 row-st">
-								<select class="form-control">
+							<div class="col-md-2 row-st text-center">
+								<select class="custom-select">
 									<option selected>메인노출여부 </option>
 									<option>노출</option>
 									<option>비노출</option>															
-								</select>	
+								</select>
+								
 							</div>
+							<div class="col-md-2 row-st text-left">
+								<button type="button" class="btn btn-danger btn-sm">판매취소</button>&nbsp;&nbsp;
+								<button type="button" class="btn btn-warning btn-sm">삭제</button>	
+							</div>
+							
 							<div class="col-md-7 row-st"></div>
 							<div class="col-md-1 row-st">
 								<button type="button" class="btn btn-success btn-sm">엑셀다운로드</button>
@@ -233,5 +264,30 @@
 			</div>
 		</div>
 	</div>
+	<script>	
+	 $( "#startDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	/* ,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png"
+	        ,buttonImageOnly: true  */
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });
+	    
+	    $( "#endDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png" 
+	        ,buttonImageOnly: true 
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });		
+	</script>
 </body>
 </html>

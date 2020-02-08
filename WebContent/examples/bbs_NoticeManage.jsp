@@ -5,12 +5,25 @@
 <head>
 <meta charset="UTF-8">
 <title>BBS and Notice Management</title>
+
 </head>
 <body>
 	<div class="row">
 		<div class="col-md-12">
-			<div class="card" id="card1-cell">
-			<form id="frm" name="frm">
+			<div class="row">				
+				<div class="col-md-2">
+					<nav aria-label="breadcrumb" role="navigation">
+					  <ol class="breadcrumb">
+		    			<li class="breadcrumb-item"><a href="adminMain.jsp">관리자 홈</a></li>
+		    			<li class="breadcrumb-item active" aria-current="page">게시물 관리</li>		    			
+		  			 </ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="card">
+			<form id="frm" name="frm" method="post" action="">
 				<div class="card-header">
 					<h6 class="card-title">
 							게시판 관리
@@ -28,11 +41,23 @@
 							<button type="button" class="btn btn-primary btn-sm">전체</button>
 						</div>
 						<div class="col-md-2">
-							<input type="text" class="form-control" readonly>							
+															
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>						
 						</div>
-						<div class="col-md-1"><p>~</p></div>
+						<span>~</span>
 						<div class="col-md-2">
-							<input type="text" class="form-control" readonly>
+															
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 						</div>
 						<div class="col-md-2"></div>
 					</div>
@@ -101,7 +126,7 @@
 			</div>	
 		</div>
 		<div class="col-md-12">
-			<div class="card" id="card1-cell">
+			<div class="card">
 				<div class="card-header">
 					<div class="row">
 						<div class="col-md-4">
@@ -128,9 +153,9 @@
 					<div class="row">
 						<div class="col-md-3">
 							<!-- <button type="submit" class="btn btn-primary btn-sm">답변달기</button> -->
-							<a href="bbsRegist.jsp" class="btn btn-primary btn-sm">답변달기</a>
-							<button type="button" class="btn btn-danger btn-sm">삭제</button>							
-							<a class="btn btn-primary btn-sm" href="">공지등록</a>
+							<a href="bbsRegist.jsp" class="btn btn-primary btn-sm">답변달기</a>&nbsp;&nbsp;
+							<button type="button" class="btn btn-danger btn-sm">삭제</button>&nbsp;&nbsp;							
+							<a  href="noticeRegist.jsp" class="btn btn-primary btn-sm">공지등록</a>
 						</div>											
 						<div class="col-md-8"></div>
 						<div class="col-md-1">
@@ -183,5 +208,30 @@
 			</div>
 		</div>	
 	</div>
+	<script>	
+	 $( "#startDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	/* ,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png"
+	        ,buttonImageOnly: true  */
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });
+	    
+	    $( "#endDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png" 
+	        ,buttonImageOnly: true 
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });			    	    	  
+	</script>
 </body>
 </html>

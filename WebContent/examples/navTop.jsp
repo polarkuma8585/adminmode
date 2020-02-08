@@ -12,9 +12,12 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">  
   <script src="https://kit.fontawesome.com/466f6d08a6.js" crossorigin="anonymous"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+
   <title>
     	남빵 프로젝트 관리자 모드
   </title>
+  
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />  
@@ -26,6 +29,19 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
   <link href="../assets/css/NewCSS.css" rel="stylesheet" />
+  <!-- bootstrap datepicker CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"/>
+  <script src="../assets/js/plugins/bootstrap-datepicker.ko.min.js"></script>
+  <!-- toast chart CDN -->
+  <link rel="stylesheet" href="https://uicdn.toast.com/tui.chart/latest/tui-chart.min.css">
+  <script type='text/javascript' src='https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.min.js'></script>
+  <script type='text/javascript' src='https://uicdn.toast.com/tui.chart/latest/raphael.js'></script>
+  <script src="https://uicdn.toast.com/tui.chart/latest/tui-chart.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
   
     <decorator:head />
   </head>
@@ -170,13 +186,13 @@
             <div class="collapse" id="stastics">
         		<ul class="nav">
         			<li style=>
-		          	  <a href="">
+		          	  <a href="selngAnalysDay.jsp">
 		              <i class="nc-icon nc-chart-pie-36"></i>
 		              <p>매출분석</p>
 			          </a>
                    </li>
                    <li style=>
-		          	  <a href="">
+		          	  <a href="goodsAnalys.jsp">
 		              <i class="nc-icon nc-chart-pie-36"></i>
 		              <p>상품분석</p>
 			          </a>
@@ -299,8 +315,11 @@
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+      
+     
       demo.initChartsPages();
     });
+    
   </script>
 </body>
 

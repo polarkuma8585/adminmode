@@ -8,29 +8,54 @@
 </head>
 <body>
 
-	<div class="row">		
+	<div class="row">
 		<div class="col-md-12">
-			<form id="frm" name="frm">
+			<div class="row">				
+				<div class="col-md-2 ml-3">
+					<nav aria-label="breadcrumb" role="navigation">
+					  <ol class="breadcrumb">
+		    			<li class="breadcrumb-item"><a href="adminMain.jsp">관리자 홈</a></li>
+		    			<li class="breadcrumb-item active" aria-current="page">마일리지 관리</li>		    			
+		  			 </ol>
+					</nav>
+				</div>
+			</div>
+		</div>		
+		<div class="col-md-12">
+			<form id="frm" name="frm" method="post" action="">
 			<div class="col-md-12">
-				<div class="card" id="card1-cell">
+			 
+				<div class="card" >
 					<div class="card-header">
 						<h6 class="card-title">마일리지 관리</h6>
 						<hr>
 					</div>
 					<div class="card-body">
 						<div class="row">
-							<div class="col-md-1">아이디</div>
+							<div class="col-md-1 text-center">아이디</div>
 							<div class="col-md-3">
 								<input type="text" class="form-control">
 							</div>
 							<div class="col-md-2"></div>
 							<div class="col-md-1">기간</div>
 							<div class="col-md-2">
-								<input type="text" class="form-control" readonly>
+								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 							</div>
-							<div class="col-md-1">~</div>
+							<span>~</span>
 							<div class="col-md-2">
-								<input type="text" class="form-control" readonly>
+								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 							</div>
 																
 						</div>
@@ -49,20 +74,20 @@
 			</form>	<!-- form 끝 -->
 		</div> <!-- 첫번째 card 끝 -->
 		<div class="col-md-12">
-			<div class="row">
+			<div class="row" style="padding:0 14px;">				
 				<div class="col-md-4">
-		            <div class="card card-stats" id="card1-cell">
+		            <div class="card card-stats">
 		              <div class="card-body ">
 		                <div class="row">
 		                  <div class="col-5 col-md-4">
 		                    <div class="icon-big text-center icon-warning">
-		<!--                       <i class="nc-icon nc-cart-simple text-warning"></i> -->
-								  <i class="fas fa-bread-slice text-warning"></i>
+							<!--  <i class="nc-icon nc-cart-simple text-warning"></i> -->
+								  <i class="fas fa-coins text-warning"></i>
 		                    </div>
 		                  </div>
 		                  <div class="col-7 col-md-8">
 		                    <div class="numbers">
-		                      <p class="card-category">증가</p>                      
+		                      <p class="card-category">마일리지 증가</p>                      
 		                      <p class="card-title">0원<p>
 		                    </div>
 		                  </div>
@@ -81,12 +106,12 @@
 		                  <div class="col-5 col-md-4">
 		                    <div class="icon-big text-center icon-warning">
 		<!--                       <i class="nc-icon nc-cart-simple text-warning"></i> -->
-								  <i class="fas fa-bread-slice text-warning"></i>
+								  <i class="fas fa-coins text-warning"></i>
 		                    </div>
 		                  </div>
 		                  <div class="col-7 col-md-8">
 		                    <div class="numbers">
-		                      <p class="card-category">차감</p>                      
+		                      <p class="card-category">마일리지 차감</p>                      
 		                      <p class="card-title">0원<p>
 		                    </div>
 		                  </div>
@@ -106,12 +131,12 @@
 		                  <div class="col-5 col-md-4">
 		                    <div class="icon-big text-center icon-warning">
 		<!--                       <i class="nc-icon nc-cart-simple text-warning"></i> -->
-								  <i class="fas fa-bread-slice text-warning"></i>
+								  <i class="fas fa-coins text-warning"></i>
 		                    </div>
 		                  </div>
 		                  <div class="col-7 col-md-8">
 		                    <div class="numbers">
-		                      <p class="card-category">합계</p>                      
+		                      <p class="card-category">마일리지 합계</p>                      
 		                      <p class="card-title">0원<p>
 		                    </div>
 		                  </div>
@@ -128,7 +153,7 @@
 		</div> <!-- 두번째 card 끝 -->
 		<div class="col-md-12">
 			<div class="col-md-12">
-				<div class="card" id="card2-cell">
+				<div class="card" >
 					<div class="card-header">
 						<div class="row">
 							<div class="col-md-1">
@@ -154,8 +179,8 @@
 						<div class="row">
 						<div class="table-responsive" style="overflow:hidden;">
 		                  <table class="table table-hover">
-		                    <thead class="text-warning">		                    		                    
-			                      <th class="text-center" rowspan="2">		                      	
+		                    <thead class="text-primary">		                    		                    
+			                      <th class="text-center">		                      	
 									  <div class="custom-control custom-checkbox">
 										  <input type="checkbox" class="custom-control-input" id="resultChkAll">
 										  <label class="custom-control-label" for="resultChkAll"></label>
@@ -224,6 +249,31 @@
 				</div>
 			</div>			
 		</div> <!-- 세번째 card 끝 -->		
-	</div>	
+	</div>
+	<script>	
+	 $( "#startDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	/* ,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png"
+	        ,buttonImageOnly: true  */
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });
+	    
+	    $( "#endDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png" 
+	        ,buttonImageOnly: true 
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });			    	    	  
+	</script>	
 </body>
 </html>

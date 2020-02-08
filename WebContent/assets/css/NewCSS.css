@@ -21,3 +21,10 @@
 #card2-cell div div div {
 	border:1px solid black;
 }
+textarea.form-control{
+	max-height: 500px;
+}
+.breadcrumb{
+	background-color: white;
+	box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+}

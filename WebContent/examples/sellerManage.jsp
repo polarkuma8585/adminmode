@@ -4,16 +4,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>판매자 관리</title>
 </head>
 <body>
 	
 	<div class="row">
 		<div class="col-md-12">
+			<div class="row">				
+				<div class="col-md-2 ml-3">
+					<nav aria-label="breadcrumb" role="navigation">
+					  <ol class="breadcrumb">
+		    			<li class="breadcrumb-item"><a href="adminMain.jsp">관리자 홈</a></li>
+		    			<li class="breadcrumb-item active" aria-current="page">판매자 관리</li>		    			
+		  			 </ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
 			
 			<div class="col-md-12">
 				<form id="frm" name="frm" class="form-horizontal">
-				<div class="card" id="card1-cell">
+				<div class="card" >
 					<div class="card-header">						
 						<h6 class="card-title">
 							판매자 관리
@@ -43,7 +55,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class=" col-md-1 row-st ">검색어</div>
+							<div class=" col-md-1">검색어</div>
 							<div class="col-md-2">
 								<select class="custom-select">
 									<option>판매자ID</option>
@@ -115,18 +127,36 @@
 							<div class="col-md-3"></div>
 							<div class="col-md-1 ">가입일</div>
 							<div class="col-md-2 ">
-								<input type="date" class="form-control">
+								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="joinDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 							</div>
 							<div class="col-md-3"></div>
 						</div>
 						<div class="row">
 							<div class="col-md-1 ">판매일</div>
 							<div class="col-md-2 ">
-								<input type="text" class="form-control" style="width:150px" readonly>
+								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 							</div>
 							<div class="col-md-1 text-center"><h3 class="h3">~</h3></div>
 							<div class="col-md-2 ">
-								<input type="text" class="form-control" style="width:150px" readonly>
+								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 							</div>
 							<div class="col-md-1 ">판매시간</div>
 							<div class="col-md-2 ">
@@ -157,7 +187,7 @@
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-12">
-				<div class="card" id="card2-cell">
+				<div class="card">
 					<div class="card-header">
 						<div class="row">
 							<div class="col-1 row-st text-center">
@@ -166,7 +196,7 @@
 							<div class="col-7">								
 							</div>
 							<div class="col-2 ">
-								<select class="custom-select custom-select-sm">
+								<select class="custom-select">
 									<option selected>등록일순</option>
 									<option>등록일 역순</option>
 									<option>주문번호순</option>
@@ -175,7 +205,7 @@
 								</select>								
 							</div>
 							<div class="col-2 ">
-								<select class="custom-select custom-select-sm">
+								<select class="custom-select">
 									<option selected>10개씩보기</option>
 									<option>20개씩보기</option>
 									<option>30개씩보기</option>															
@@ -184,7 +214,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-2 text-center">
-								<select class="custom-select custom-select-sm mt-2">
+								<select class="custom-select mt-1">
 									<option selected>상태 변경</option>
 									<option>일반</option>
 									<option>징계</option>
@@ -193,7 +223,7 @@
 								</select>
 							</div>
 							<div class="col-md-2">
-								<select class="custom-select custom-select-sm mt-2">
+								<select class="custom-select mt-1">
 									<option selected>판매취소 승인 여부</option>
 									<option>승인</option>
 									<option>비승인</option>									
@@ -256,5 +286,42 @@
 			</div>
 		</div>
 	</div>
+	<script>	
+	 $( "#startDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	/* ,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png"
+	        ,buttonImageOnly: true  */
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });
+	    
+	    $( "#endDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png" 
+	        ,buttonImageOnly: true 
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });
+	    
+	    $( "#joinDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png" 
+	        ,buttonImageOnly: true 
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });
+	</script>
 </body>
 </html>

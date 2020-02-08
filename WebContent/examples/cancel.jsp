@@ -10,20 +10,35 @@
 	<div class="row ">
 		<div class="col-md-12">
 			<div class="row" style="padding: 0 30px">
-			<div class="col-md-6 "></div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">				
+							<div class="col-md-4">
+								<nav aria-label="breadcrumb" role="navigation">
+								  <ol class="breadcrumb">
+					    			<li class="breadcrumb-item"><a href="adminMain.jsp">관리자 홈</a></li>
+					    			<li class="breadcrumb-item active" aria-current="page">결제 취소 관리</li>		    			
+					  			 </ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="col-md-3 ">				
 				<div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-bookmark-2 text-danger"></i>
+                      <i class="fas fa-receipt text-danger"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">취소신청</p>
-                      <p class="card-title">총 0건 <br>0원
+                      <p class="card-title">총 0건 <br>
                         <p>
                     </div>
                   </div>
@@ -43,13 +58,13 @@
 	                <div class="row">
 	                  <div class="col-5 col-md-4">
 	                    <div class="icon-big text-center icon-warning">
-	                      <i class="nc-icon nc-box-2 text-primary"></i>
+	                      <i class="fas fa-truck-loading text-primary"></i>
 	                    </div>
 	                  </div>
 	                  <div class="col-7 col-md-8">
 	                    <div class="numbers">
 	                      <p class="card-category">환불</p>
-	                      <p class="card-title">총 0건 <br> 0원
+	                      <p class="card-title">총 0건 <br>
 	                        <p>
 	                    </div>
 	                  </div>
@@ -71,7 +86,8 @@
 				<form id="frm" name="frm">
 				<div class="card" id="card1">
 					<div class="card-header">
-						<h4 class="card-title">취소 환불 검색</h4>
+						<h6 class="card-title">취소 환불 검색</h6>
+						<hr>
 						<ul class="nav nav-tabs">
 						  <li class="nav-item">
 						    <a class="nav-link active" href="#">취소</a>
@@ -109,7 +125,7 @@
 						</div> <!-- 첫줄끝 -->
 						<div class="row">
 							<div class="col-md-1 row-st"><p class="mt-2 pt-1">검색기간</p></div>
-							<div class="col-md-6 row-st">
+							<div class="col-md-4 row-st">
 								<button type="button" class="btn btn-primary btn-sm">오늘</button>											
 											<button type="button" class="btn btn-primary btn-sm">3일</button>
 											<button type="button" class="btn btn-primary btn-sm">7일</button>
@@ -120,11 +136,23 @@
 											<button type="button" class="btn btn-primary btn-sm">전체</button>
 							</div>
 							<div class="col-md-2 row-st">
-								<input type="text" class="form-control" readonly style="width:150px">
+																
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 							</div>
-							<div class="col-md-1 row-st">~</div>
+							<span>~</span>
 							<div class="col-md-2 row-st">
-								<input type="text" class="form-control" readonly style="width:150px">
+								
+								<div class="input-group">								  
+								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
+								    <div class="input-group-append" >
+								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 	</div>
+							    </div>
 							</div>
 						</div>	<!-- 둘째라인 끝 -->
 						<div class="row ">
@@ -307,6 +335,32 @@
 				</div>
 			</div>
 		</div>
-	</div>
+		
+	<script>	
+	 $( "#startDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	/* ,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png"
+	        ,buttonImageOnly: true  */
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });
+	    
+	    $( "#endDate" ).datepicker({
+	    	dateFormat: 'yyyy-mm-dd'
+	    	,startDate: '-10d'
+	    	,uiLibrary: 'bootstrap4'
+	    	,showOn: "both"  
+	        ,buttonImage: "../assets/icon/calendar.png" 
+	        ,buttonImageOnly: true 
+	        ,language:"ko"
+	        ,todayHighlight : true
+	        ,autoclose: true
+	    });			    	    	  
+	</script>
+	
 </body>
 </html>
