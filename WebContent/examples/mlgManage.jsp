@@ -32,42 +32,52 @@
 					</div>
 					<div class="card-body">
 						<div class="row">
-							<div class="col-md-1 text-center">아이디</div>
+							<div class="col-md-1 pt-2 text-center">아이디</div>
 							<div class="col-md-3">
 								<input type="text" class="form-control">
 							</div>
 							<div class="col-md-2"></div>
-							<div class="col-md-1">기간</div>
+							<div class="col-md-1 pt-2">기간</div>
 							<div class="col-md-2">
-								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
+																
 								<div class="input-group date" >								  
-								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
-								    <div class="input-group-append" >
-								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-								 	</div>
+								    <input type="text" class="form-control" id="startDate" placeholder="시작일">
+								    <div class="input-group-append">								    	
+								    	<div class="input-group-text">
+								    		<label for="startDate" class="fa fa-calendar" style="cursor:pointer;">
+								    			<!-- <i class="fa fa-calendar"></i> -->
+								    		</label>
+								    	</div>								    	
+								 	</div>								 	
 							    </div>
 							</div>
-							<span>~</span>
+							<span class="pt-2">~</span>
 							<div class="col-md-2">
-								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
+																
 								<div class="input-group date" >								  
-								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
-								    <div class="input-group-append" >
-								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-								 	</div>
+								    <input type="text" class="form-control" id="endDate" placeholder="종료일">
+								    <div class="input-group-append">								    	
+								    	<div class="input-group-text">
+								    		<label for="endDate" class="fa fa-calendar" style="cursor:pointer;">
+								    			<!-- <i class="fa fa-calendar"></i> -->
+								    		</label>
+								    	</div>								    	
+								 	</div>								 	
 							    </div>
 							</div>
 																
 						</div>
-						<div class="row">
-							<div class="col-md-12 text-center">
-								<button type="submit" class="btn btn-warning btn-sm">검색</button>&nbsp;
-								<button type="reset" class="btn btn-warning btn-sm">초기화</button>								
-							</div>
-						</div>	
+						
+						
 					</div>
 					<div class="card-footer">
-					
+					<hr>
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<button type="submit" class="btn btn-primary">검색</button>&nbsp;
+								<button type="reset" class="btn btn-primary">초기화</button>								
+							</div>
+						</div>	
 					</div>
 				</div>
 			</div>
@@ -173,10 +183,10 @@
 					<div class="card-body">
 						<div class="row">
 							<div class="col-md-12">
-							 버튼 추가 가능 <!-- 추가 가능 -->
+							<!-- 추가 가능 -->
 							</div>
 						</div>
-						<div class="row">
+						
 						<div class="table-responsive" style="overflow:hidden;">
 		                  <table class="table table-hover">
 		                    <thead class="text-primary">		                    		                    
@@ -242,7 +252,7 @@
 		                    </tbody>
 		                  </table>
                 		</div>
-						</div>						
+												
 					</div>
 					<div class="card-footer">
 					</div>

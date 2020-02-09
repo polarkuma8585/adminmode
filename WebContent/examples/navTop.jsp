@@ -47,19 +47,19 @@
   </head>
 
 <body class="">
-  <div class="wrapper ">
-    <div class="sidebar" data-color="white" data-active-color="danger">
+  <div class="wrapper">
+    <div class="sidebar" data-color="white" data-active-color="warning">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
       <div class="logo">
         <a href="" class="simple-text logo-mini"> <!-- 좌상단 로고 링크 -->
           <div class="logo-image-small">
-            <img src=""> <!-- 로고 이미지 -->
+            <img src="../assets/img/mukbbang_logo.png"> <!-- 로고 이미지 -->
           </div>
         </a>
         <a href="" class="simple-text logo-normal"> <!-- 로고 옆 텍스트 링크 -->
-          	남빵          
+          	먹빵          
         </a>
       </div>
       <div class="sidebar-wrapper">
@@ -71,7 +71,7 @@
             </a>
           </li>
           <li>
-            <a href="#merchList" data-toggle="collapse" aria-expanded="false" aria-controls="merchList">
+            <a href="#merchList" data-toggle="collapse" aria-expanded="true" aria-controls="merchList">
               <i class="nc-icon nc-cart-simple"></i>
               <p>상품관리</p>
             </a>
@@ -218,7 +218,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">남빵 관리자 모드</a>
+            <a class="navbar-brand" href="#">먹빵 관리자 모드</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>

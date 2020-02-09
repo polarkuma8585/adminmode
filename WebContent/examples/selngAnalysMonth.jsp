@@ -124,46 +124,56 @@ $(function(){
 				</div>
 				<div class="card-body">
 					<div class="row ">
-							<div class="col-md-1 text-center row-st">검색기간</div>
-							<div class="col-md-3 row-st">
+							<div class="col-md-1 pt-3 text-center row-st">검색기간</div>
+							<div class="col-md-3 pt-1 row-st">
 								<button type="button" class="btn btn-primary btn-sm">1개월</button>											
 								<button type="button" class="btn btn-primary btn-sm">3개월</button>
 								<button type="button" class="btn btn-primary btn-sm">6개월</button>
 								<button type="button" class="btn btn-primary btn-sm">12개월</button>																			
 							</div>
 							<!-- datepicker -->
-							<div class="col-md-2 row-st"> 						
+							<div class="col-md-2 pt-1 row-st"> 						
 								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
 								<div class="input-group date" >								  
-								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
-								    <div class="input-group-append" >
-								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-								 	</div>
+								    <input type="text" class="form-control" id="startDate" placeholder="시작일">
+								    <div class="input-group-append">								    	
+								    	<div class="input-group-text">
+								    		<label for="startDate" class="fa fa-calendar" style="cursor:pointer;">
+								    			<!-- <i class="fa fa-calendar"></i> -->
+								    		</label>
+								    	</div>								    	
+								 	</div>								 	
 							    </div>																
 							</div>
-							<span>
+							<span class="pt-3">
 							 ~
 							</span>
 							<!-- datepicker -->
 							<!-- <div class="col-md-1 row-st">~</div> -->
-							<div class="col-md-2 row-st"> 
+							<div class="col-md-2 pt-1 row-st"> 
 								<!-- <input type="text" class="form-control" id="endDate" style="width:150px"> -->
-								<div class="input-group">								  
-								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
-								    <div class="input-group-append" >
-								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-								 	</div>
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="endDate" placeholder="종료일">
+								    <div class="input-group-append">								    	
+								    	<div class="input-group-text">
+								    		<label for="endDate" class="fa fa-calendar" style="cursor:pointer;">
+								    			<!-- <i class="fa fa-calendar"></i> -->
+								    		</label>
+								    	</div>								    	
+								 	</div>								 	
 							    </div>
 							</div>
 					</div>
+												 
+				</div>
+				<div class="card-footer">
+					<hr>
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<button type="submit" class="btn btn-primary btn-sm">검색</button>											
 							<button type="reset" class="btn btn-primary btn-sm">초기화</button>
 						</div>
-					</div>							 
-				</div>
-				<div class="card-footer">
+					</div>
 				</div>
 				</form>
 			</div>

@@ -83,8 +83,8 @@
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-12">
-				<form id="frm" name="frm">
-				<div class="card" id="card1">
+				<form id="frm" name="frm" method="post" action="">
+				<div class="card">
 					<div class="card-header">
 						<h6 class="card-title">취소 환불 검색</h6>
 						<hr>
@@ -100,8 +100,8 @@
 					</div>
 					<div class="card-body"> <!-- 첫번째 카드 바디 시작 -->
 						<div class="row ">
-							<div class="col-md-1 row-st">검색어</div> 
-							<div class="col-md-2 row-st">
+							<div class="col-md-1 pt-3 row-st">검색어</div> 
+							<div class="col-md-2 pt-2 row-st">
 								<select class="custom-select">
 									<option selected >주문번호</option>
 									<option>결제번호</option>
@@ -111,11 +111,11 @@
 									<option>판매번호</option>
 								</select>
 							</div> 
-							<div class="col-md-8 row-st">
+							<div class="col-md-6 ml-2 row-st" style="padding-top:10px">
 								<input type="text" class="form-control">
 							</div> 
 							
-							<div class="col-md-1 row-st">
+							<div class="col-md-1 pt-1 row-st">
 								<div class="form-group">
 								<button type="button" class="btn btn-primary btn-sm">+</button>
 								<button type="button" class="btn btn-primary btn-sm">-</button>
@@ -124,7 +124,7 @@
 							
 						</div> <!-- 첫줄끝 -->
 						<div class="row ">
-							<div class="col-md-1 row-st">검색기간</div>
+							<div class="col-md-1 row-st"><p class="mt-2 pt-1">검색기간</p></div>
 							<div class="col-md-4 row-st">
 											<button type="button" class="btn btn-primary btn-sm">오늘</button>											
 											<button type="button" class="btn btn-primary btn-sm">3일</button>
@@ -135,29 +135,37 @@
 											<button type="button" class="btn btn-primary btn-sm">1년</button>																					
 											<button type="button" class="btn btn-primary btn-sm">전체</button>
 							</div>
-							<div class="col-md-2 row-st">
-								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
+							<div class="col-md-2 pt-1 row-st">
+																
 								<div class="input-group date" >								  
-								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
-								    <div class="input-group-append" >
-								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-								 	</div>
+								    <input type="text" class="form-control" id="startDate" placeholder="시작일">
+								    <div class="input-group-append">								    	
+								    	<div class="input-group-text">
+								    		<label for="startDate" class="fa fa-calendar" style="cursor:pointer;">
+								    			<!-- <i class="fa fa-calendar"></i> -->
+								    		</label>
+								    	</div>								    	
+								 	</div>								 	
 							    </div>
 							</div>
-							<span>~</span>
-							<div class="col-md-2 row-st">
-								<!-- <input type="text" class="form-control" id="endDate" style="width:150px"> -->
-								<div class="input-group">								  
-								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
-								    <div class="input-group-append" >
-								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-								 	</div>
+							<span class="pt-3">~</span>
+							<div class="col-md-2 pt-1 row-st">
+								
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="endDate" placeholder="종료일">
+								    <div class="input-group-append">								    	
+								    	<div class="input-group-text">
+								    		<label for="endDate" class="fa fa-calendar" style="cursor:pointer;">
+								    			<!-- <i class="fa fa-calendar"></i> -->
+								    		</label>
+								    	</div>								    	
+								 	</div>								 	
 							    </div>
 							</div>
 						</div>	<!-- 둘째라인 끝 -->
 						<div class="row ">
-							<div class="col-md-1 row-st">상품</div> 
-							<div class="col-md-2 row-st">
+							<div class="col-md-1 pt-3 row-st">상품</div> 
+							<div class="col-md-2 pt-2 row-st">
 								<select class="custom-select">
 									<option selected >상품명</option>
 									<option>상품번호</option>
@@ -165,7 +173,7 @@
 									<option>판매번호</option>
 								</select>
 							</div> 
-							<div class="col-md-8 row-st">
+							<div class="col-md-6 ml-2 row-st" style="padding-top:10px;">
 								<input type="text" class="form-control">
 							</div> 
 							
@@ -178,7 +186,9 @@
 						</div><!-- 셋째라인 끝 -->
 						
 						<div class="row ">
-							<div class="col-md-1 row-st">환불상태</div>
+							<div class="col-md-1 pt-3 row-st">
+								환불상태
+							</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
 								  <input type="checkbox" class="custom-control-input" id="customCheck1">

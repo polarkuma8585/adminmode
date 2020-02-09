@@ -28,41 +28,41 @@
 					<hr>										
 				</div>
 				<div class="card-body">
-					<div class="row">
-						<div class="col-md-2"><p>마일리지 지급 시점</p></div>
-						<div class="col-md-2 text-right"><p>결제 완료 후</p>
+					<div class="row ">
+						<div class="col-md-2 pt-2"><p>마일리지 지급 시점</p></div>
+						<div class="col-md-2 pt-2 text-right"><p>결제 완료 후</p>
 						</div>
 						<div class="col-md-2">
 							<input type="text" class="form-control">
 						</div>
-						<div class="col-md-2 text-left"><p>으로 설정</p></div>
+						<div class="col-md-2 pt-2 text-left"><p>으로 설정</p></div>
 					</div>
 					<div class="row">
-						<div class="col-md-2"><p>상품 구매 금액 기준</p></div>
-						<div class="col-md-2 text-right"><p>상품 구매 금액을</p>
+						<div class="col-md-2 pt-2"><p>상품 구매 금액 기준</p></div>
+						<div class="col-md-2 pt-2 text-right"><p>상품 구매 금액을</p>
 						</div>
 						<div class="col-md-2">
 							<input type="text" class="form-control">
 						</div>
-						<div class="col-md-2 text-left"><p>기준으로 설정</p></div>
+						<div class="col-md-2 pt-2 text-left"><p>기준으로 설정</p></div>
 					</div>
 					<div class="row">
-						<div class="col-md-2"><p>마일리지 지급 비율</p></div>
-						<div class="col-md-2 text-right"><p>상품 값의</p>
+						<div class="col-md-2 pt-2"><p>마일리지 지급 비율</p></div>
+						<div class="col-md-2 pt-2 text-right"><p>상품 값의</p>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-2 ">
 							<input type="text" class="form-control">
 						</div>
-						<div class="col-md-2 text-left"><p>% 마일리지 적립</p></div>
+						<div class="col-md-2 pt-2 text-left"><p>% 마일리지 적립</p></div>
 					</div>
 					<div class="row">
-						<div class="col-md-2"><p>마일리지 지급 비율</p></div>
-						<div class="col-md-2 text-right"><p>신규회원 가입시</p>
+						<div class="col-md-2 pt-2"><p>마일리지 지급 비율</p></div>
+						<div class="col-md-2 pt-2 text-right"><p>신규회원 가입시</p>
 						</div>
 						<div class="col-md-2">
 							<input type="text" class="form-control">
 						</div>
-						<div class="col-md-2 text-left"><p>원 적립</p></div>
+						<div class="col-md-2 pt-2 text-left"><p>원 적립</p></div>
 					</div>
 				</div>
 				<div class="card-footer">
@@ -77,30 +77,32 @@
 				</div>
 				<div class="card-body">
 					<div class="row">
-						<div class="col-md-2 "><p>상품 구매금액 조건</p></div>
-						<div class="col-md-2 text-right"><p>상품 구매 합계액 최소</p>
+						<div class="col-md-2 pt-2"><p>상품 구매금액 조건</p></div>
+						<div class="col-md-2 pt-2 text-right"><p>상품 구매 합계액 최소</p>
 						</div>
 						<div class="col-md-2">
 							<input type="text" class="form-control">
 						</div>
-						<div class="col-md-2 text-left"><p>원 이상일 때 마일리지 사용 가능</p></div>
+						<div class="col-md-2 pt-2 text-left"><p>원 이상일 때 마일리지 사용 가능</p></div>
 					</div>
 					<div class="row">
-						<div class="col-md-2"><p>누적 마일리지 조건</p></div>
-						<div class="col-md-2 text-right"><p>누적 마일리지 최소</p>
+						<div class="col-md-2 pt-2"><p>누적 마일리지 조건</p></div>
+						<div class="col-md-2 pt-2 text-right"><p>누적 마일리지 최소</p>
 						</div>
 						<div class="col-md-2">
 							<input type="text" class="form-control">
 						</div>
-						<div class="col-md-2 text-left"><p>원 이상일 때 사용 가능</p></div>
+						<div class="col-md-2 pt-2 text-left"><p>원 이상일 때 사용 가능</p></div>
 					</div>
+					
+				</div>
+				<div class="card-footer">
+					<hr>
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<button type="submit" class="btn btn-primary">저장</button>
 						</div>
 					</div>
-				</div>
-				<div class="card-footer">
 				</div>
 			</div>
 		</div>		

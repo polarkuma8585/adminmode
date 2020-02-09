@@ -31,7 +31,8 @@ $(function(){
 		    	            {
 		    	                name: '취소',
 		    	                data: [4.4, 12.2, 16.3, 18.5, 16.7, 10.9, 4.2]
-		    	            }
+		    	            },
+		    	            
 		    	        ],
 		    	        line: [
 		    	            {
@@ -123,45 +124,55 @@ $(function(){
 				</div>
 				<div class="card-body">
 					<div class="row ">
-							<div class="col-md-1 text-center">검색기간</div>
-							<div class="col-md-3">
+							<div class="col-md-1 pt-3 text-center">검색기간</div>
+							<div class="col-md-3 pt-1">
 								<button type="button" class="btn btn-primary btn-sm">오늘</button>											
 								<button type="button" class="btn btn-primary btn-sm">3일</button>
 								<button type="button" class="btn btn-primary btn-sm">7일</button>											
 							</div>
 							<!-- datepicker -->
-							<div class="col-md-2"> 						
+							<div class="col-md-2 pt-1"> 						
 								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
 								<div class="input-group date" >								  
-								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
-								    <div class="input-group-append" >
-								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-								 	</div>
+								    <input type="text" class="form-control" id="startDate" placeholder="시작일">
+								    <div class="input-group-append">								    	
+								    	<div class="input-group-text">
+								    		<label for="startDate" class="fa fa-calendar" style="cursor:pointer;">
+								    			<!-- <i class="fa fa-calendar"></i> -->
+								    		</label>
+								    	</div>								    	
+								 	</div>								 	
 							    </div>																
 							</div>
-							<span>
+							<span class="pt-3">
 							 ~
 							</span>
 							<!-- datepicker -->
 							<!-- <div class="col-md-1 row-st">~</div> -->
-							<div class="col-md-2"> 
+							<div class="col-md-2 pt-1"> 
 								<!-- <input type="text" class="form-control" id="endDate" style="width:150px"> -->
-								<div class="input-group">								  
-								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
-								    <div class="input-group-append" >
-								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-								 	</div>
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="endDate" placeholder="종료일">
+								    <div class="input-group-append">								    	
+								    	<div class="input-group-text">
+								    		<label for="endDate" class="fa fa-calendar" style="cursor:pointer;">
+								    			<!-- <i class="fa fa-calendar"></i> -->
+								    		</label>
+								    	</div>								    	
+								 	</div>								 	
 							    </div>
 							</div>
 					</div>
+												 
+				</div>
+				<div class="card-footer">
+					<hr>
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<button type="submit" class="btn btn-primary btn-sm">검색</button>											
 							<button type="reset" class="btn btn-primary btn-sm">초기화</button>
 						</div>
-					</div>							 
-				</div>
-				<div class="card-footer">
+					</div>
 				</div>
 				</form>
 			</div>
@@ -224,35 +235,17 @@ $(function(){
 				<div class="card-body">
 						<div class="table-responsive" style="overflow:hidden;">
 		                  <table class="table table-hover table-condensed">
-		                    <thead class="text-primary text-center">
-		                     
-		                      <th>
-		                      		일자
-		                      </th>
-		                      <th>
-		                        	주문수
-		                      </th>
-		                      <th>
-		                        	상품 구매금액
-		                      </th>
-		                      <th>
-		                        	할인금액
-		                      </th>
-		                      <th>
-		                        	마일리지 사용액
-		                      </th>
-		                      <th>
-		                      		상품명
-		                      </th>
-		                      <th>
-		                      		결제 금액 합계
-		                      </th>
-		                      <th>
-		                      		환불액 합계
-		                      </th>
-		                      <th>
-		                      		순매출
-		                      </th>
+		                    <thead class="text-primary text-center">		                     
+		                      <th>일자</th>
+		                      <th>주문수</th>		
+		                      <th>상품 구매금액</th>
+		                      <th>할인 금액</th>
+		                      <th>마일리지 사용액</th>
+		                      <th>상품명</th>
+		                      <th>결제 금액합계</th>
+		                      <th>환불액 합계</th>
+		                      <th>순매출</th>
+		                      
 		                    </thead>
 		                    <tbody>
 		                     <tr>

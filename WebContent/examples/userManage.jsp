@@ -35,15 +35,15 @@
 					</div>
 					<div class="card-body"> <!-- 첫번째 카드 바디 시작 -->
 						<div class="row">
-							<div class=" col-md-1 row-st ">검색어</div> <!-- 첫줄끝 -->
-							<div class="col-md-2 row-st">
+							<div class=" col-md-1 pt-3 row-st ">검색어</div> <!-- 첫줄끝 -->
+							<div class="col-md-2 row-st" style="padding-top:10px">
 								<input type="text" class="form-control " value="사용자ID" readonly>
 							</div> 
-							<div class="col-md-8 row-st">
+							<div class="col-md-6 row-st" style="padding-top:10px">
 								<input type="text" class="form-control ">
 							</div> 
 							
-							<div class="col-md-1 row-st">
+							<div class="col-md-1 pt-1 row-st">
 								<div class="form-group">
 								<button type="button" class="btn btn-primary btn-sm">+</button>
 								<button type="button" class="btn btn-primary btn-sm">-</button>
@@ -52,7 +52,7 @@
 							
 						</div> <!-- 첫줄끝 -->
 						<div class="row ">							
-							<div class="col-md-1 row-st">사용자 상태</div>
+							<div class="col-md-1 row-st" style="padding-top:10px">사용자 상태</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
 								  <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -83,16 +83,16 @@
 								  <label class="custom-control-label" for="customCheck1">징계</label>
 								</div>
 							</div>
-							<div class="col-md-1 row-st">주문상품</div>
-							<div class="col-md-2 row-st">
+							<div class="col-md-1 pt-2 row-st">주문상품</div>
+							<div class="col-md-2 row-st" style="padding-top:5px">
 								<input type="text" class="form-control">
 							</div>
-							<div class="col-md-1 row-st">
+							<div class="col-md-1 row-st" >
 								<button type="button" class="btn btn-primary btn-sm">상품 검색</button>
 							</div>
 						</div>	<!-- 둘째라인 끝 -->
 						<div class="row ">
-							<div class="col-md-1 row-st">구매금액 / 건수</div>
+							<div class="col-md-1 pt-2 row-st">구매금액 / 건수</div>
 							<div class="col-md-2 row-st">							
 								<select class="custom-select">									
 									<option selected>전체</option>
@@ -101,38 +101,47 @@
 								</select>								
 							</div>
 							<div class="col-md-3"></div>
-							<div class="col-md-1 row-st">가입일 / 기념일</div>
+							<div class="col-md-1 pt-2 row-st">가입일 / 생일</div>
 							<div class="col-md-2 row-st">
 								<select class="custom-select">
 									<option selected>전체</option>
 									<option>가입일</option>
-									<option>기념일</option>
+									<option>생일</option>
 								</select>
 							</div>
 							<div class="col-md-3"></div>
 						</div>
-						<div class="row">
-							<div class="col-md-1 row-st">주문일</div>
+						<div class="row mt-2">
+							<div class="col-md-1 pt-2 row-st">주문일</div>
 							<div class="col-md-2 row-st">
 								<!-- <input type="text" class="form-con	trol" id="startDate" style="width:150px"> -->								
 								<div class="input-group date" >								  
-								    <input type="text" class="form-control" id="startDate" placeholder="날짜 입력">
-								    <div class="input-group-append" >
-								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-								 	</div>
+								    <input type="text" class="form-control" id="startDate" placeholder="시작일">
+								    <div class="input-group-append">								    	
+								    	<div class="input-group-text">
+								    		<label for="startDate" class="fa fa-calendar" style="cursor:pointer;">
+								    			<!-- <i class="fa fa-calendar"></i> -->
+								    		</label>
+								    	</div>								    	
+								 	</div>								 	
 							    </div>
 							</div>
-							<div class="col-md-1 text-center row-st">~</div>
+							<span class="pt-2">~</span>
 							<div class="col-md-2 row-st">
 								<!-- <input type="text" class="form-control" id="endDate" style="width:150px"> -->
-								<div class="input-group">								  
-								    <input type="text" class="form-control" id="endDate" placeholder="날짜 입력">
-								    <div class="input-group-append" >
-								    	<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-								 	</div>
+								<div class="input-group date" >								  
+								    <input type="text" class="form-control" id="endDate" placeholder="종료일">
+								    <div class="input-group-append">								    	
+								    	<div class="input-group-text">
+								    		<label for="endDate" class="fa fa-calendar" style="cursor:pointer;">
+								    			<!-- <i class="fa fa-calendar"></i> -->
+								    		</label>
+								    	</div>								    	
+								 	</div>								 	
 							    </div>
 							</div>
-							<div class="col-md-1 row-st">주문시간</div>
+							
+							<div class="col-md-1 pt-2 row-st" style="margin-left:7.8%">주문시간</div>
 							<div class="col-md-2 row-st">
 								<select class="custom-select ">
 												<option selected>시간 선택</option>
@@ -148,7 +157,7 @@
 							</div>
 						</div>
 						<div class="row ">
-							<div class="col-md-1 row-st">나이대</div>
+							<div class="col-md-1 pt-3 row-st">나이대</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
 								  <input type="checkbox" class="custom-control-input" id="ageAll">
