@@ -78,7 +78,7 @@
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
-                      <p class="card-category">취소신청</p>
+                      <p class="card-category">판매 취소</p>
                       <p class="card-title">총 0건 <br>0원
                         <p>
                     </div>

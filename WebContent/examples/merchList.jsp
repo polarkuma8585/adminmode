@@ -36,15 +36,15 @@
 						<div class="row ">
 							<div class="col-md-1 pt-3 row-st">검색어</div> 
 							<div class="col-md-2 pt-2 row-st">
-								<select class="custom-select row-st">
-									<option selected >상품명</option>
-									<option>상품번호</option>
-									<option>주문번호</option>
-									<option>판매번호</option>
+								<select class="custom-select row-st" name="category1"> 
+									<option value="goods_name" selected >상품명</option>
+									<option value="goods_id">상품번호</option>
+									<option value="order_id">주문번호</option>
+									<option value="sle_id">판매번호</option>
 								</select>
 							</div> 
 							<div class="col-md-6 ml-2 row-st" style="padding-top:10px">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" id="search_word" name="search_word">
 							</div> 
 							
 							<div class="col-md-1 pt-1 row-st">
@@ -59,13 +59,13 @@
 							<div class="col-md-1 row-st" style="padding-top:15px">검색기간</div>
 							<div class="col-md-4 pt-1 row-st" >
 								<button type="button" class="btn btn-primary btn-sm">오늘</button>											
-											<button type="button" class="btn btn-primary btn-sm">3일</button>
-											<button type="button" class="btn btn-primary btn-sm">7일</button>
-											<button type="button" class="btn btn-primary btn-sm">1개월</button>
-											<button type="button" class="btn btn-primary btn-sm">3개월</button>
-											<button type="button" class="btn btn-primary btn-sm">6개월</button>
-											<button type="button" class="btn btn-primary btn-sm">1년</button>																					
-											<button type="button" class="btn btn-primary btn-sm">전체</button>
+											<button type="button" class="btn btn-primary btn-sm" id="t_day" name="t_day">3일</button>
+											<button type="button" class="btn btn-primary btn-sm" id="s_day" name="s_day">7일</button>
+											<button type="button" class="btn btn-primary btn-sm" id="o_mon" name="o_mon">1개월</button>
+											<button type="button" class="btn btn-primary btn-sm" id="t_mon" name="t_mon">3개월</button>
+											<button type="button" class="btn btn-primary btn-sm" id="s_mon" name="s_mon">6개월</button>
+											<button type="button" class="btn btn-primary btn-sm" id="o_yr" name="o_yr">1년</button>																					
+											<button type="button" class="btn btn-primary btn-sm" id="d_all" name="all">전체</button>
 							</div>
 							<!-- datepicker -->
 							<div class="col-md-2 row-st" style="padding-top:8px"> 						
@@ -103,18 +103,20 @@
 						<div class="row ">
 							<div class="col-md-1 pt-2 row-st">등록시간</div>
 							<div class="col-md-2 row-st">
-								<select class="custom-select" >
+								<select class="custom-select" id="rTime" name="rTime">
 											<option selected>시간 선택</option>
-											<option></option>
-											<option></option>
-											<option></option>
-											<option></option>										
+											<option value="13:00">13:00</option>
+											<option value="14:00">14:00</option>
+											<option value="15:00">15:00</option>
+											<option value="16:00">16:00</option>
+											<option value="17:00">17:00</option>
+											<option value="18:00">18:00</option>										
 								</select>
 							</div>
 							<div class="col-md-3 row-st"></div>
-							<div class="col-md-1 pt-2 row-st">판매종료시간</div>
+							<div class="col-md-1 pt-2 row-st" >판매종료시간</div>
 							<div class="col-md-2 ml-2 row-st">
-								<select class="custom-select">
+								<select class="custom-select" id="eTime" name="eTime">
 										<option selected>시간 선택</option>
 										<option></option>
 										<option></option>

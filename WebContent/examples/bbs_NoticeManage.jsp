@@ -53,7 +53,7 @@
 								 	</div>								 	
 							    </div>						
 						</div>
-						<span class="pt-2">~</span>
+						<span class="pt-3">~</span>
 						<div class="col-md-2 pt-1">
 															
 								<div class="input-group date" >								  

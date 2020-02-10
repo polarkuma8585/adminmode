@@ -250,7 +250,7 @@
 				<div class="card">
 					<div class="card-header">
 						<div class="row">
-							<div class="col-1 row-st text-center">
+							<div class="col-1 row-st">
 								<h6 class="h6">[총 n 건]</h6>								
 							</div>
 							<div class="col-7">								
