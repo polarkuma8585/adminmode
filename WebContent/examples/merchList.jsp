@@ -5,8 +5,116 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-  
-
+<script>
+	window.addEventListener("load", function(){
+			
+		 day.addEventListener("click",function(){
+			dateInput(0,0);			
+			if(startDate.disabled == true && endDate.disabled == true){
+				startDate.disabled = false;
+				endDate.disabled = false;
+			}
+		});
+		t_day.addEventListener("click",function(){
+			dateInput(3,0);
+			if(startDate.disabled == true && endDate.disabled == true){
+				startDate.disabled = false;
+				endDate.disabled = false;
+			}
+		});
+		s_day.addEventListener("click",function(){			
+			dateInput(7,0);
+			if(startDate.disabled == true && endDate.disabled == true){
+				startDate.disabled = false;
+				endDate.disabled = false;
+			}
+		});
+		o_mon.addEventListener("click",function(){			
+			dateInput(30,0);
+			if(startDate.disabled == true && endDate.disabled == true){
+				startDate.disabled = false;
+				endDate.disabled = false;
+			}
+		});
+		t_mon.addEventListener("click",function(){
+			dateInput(90,0);
+			if(startDate.disabled == true && endDate.disabled == true){
+				startDate.disabled = false;
+				endDate.disabled = false;
+			}
+		});
+		s_mon.addEventListener("click",function(){
+			dateInput(180,0);
+			if(startDate.disabled == true && endDate.disabled == true){
+				startDate.disabled = false;
+				endDate.disabled = false;
+			}
+		});
+		o_year.addEventListener("click",function(){
+			dateInput(365,0);
+			if(startDate.disabled == true && endDate.disabled == true){
+				startDate.disabled = false;
+				endDate.disabled = false;
+			}
+		});
+		d_all.addEventListener("click",function(){
+			dateInput(365*2,0);
+			startDate.setAttribute("disabled",true);
+			endDate.setAttribute("disabled",true);
+		});
+	});
+	 //날짜 계산
+	 function dateInput(n,m){
+		  startDate.value = "";
+		  endDate.value = "";
+		  
+		  var date = new Date();
+		  var start = new Date(Date.parse(date) - n * 1000 * 60 * 60 * 24);
+		  var today = new Date(Date.parse(date) - m * 1000 * 60 * 60 * 24);
+		  
+		  var yyyy = start.getFullYear();
+		  var mm = start.getMonth()+1;
+		  var dd = start.getDate();
+		  
+		  if(mm<10){
+		   mm = "0" + mm; //10 보다 작으면 숫자앞에 0을 붙임
+		  }if(dd<10){
+		   dd = "0" + dd;
+		  }
+		  
+		  var t_yyyy = today.getFullYear();
+		  var t_mm = today.getMonth()+1;
+		  var t_dd = today.getDate();
+		  
+		  if(t_mm<10){
+		   t_mm = "0" + t_mm;
+		  }if(t_dd<10){
+		   t_dd = "0" + t_dd;
+		  }
+		  
+		  startDate.value = yyyy + "-" + mm + "-" + dd;
+		  endDate.value = t_yyyy + "-" + t_mm + "-" + t_dd;
+		  
+		 }
+	 // submit 유효성 검사
+	 function formCheck(){
+		 var d1 = new Date(startDate.value);
+		 var d2 = new Date(endDate.value);
+	        if(frm.startDate.value > frm.endDate.value) {	             
+	            alert("시작날짜와 종료날짜를 확인해 주세요.");
+	            frm.startDate.focus();
+	            return false;	            
+	        }
+	        if(frm.rTime.value > frm.eTime.value) {
+	        	alert("등록시간과 판매종료시간을 확인해 주세요.");
+	        	frm.rTime.focus();
+	        	return false;
+	        }
+	 }
+	
+	 
+	 
+</script>
 </head>
 <body>
 	<div class="row">
@@ -24,7 +132,8 @@
 		</div>
 		<div class="col-md-12">
 			<div class="col-md-12">
-				<form id="frm" name="frm" method="post" action="">
+				<!-- <form id="frm" name="frm" method="post" action="AdminMerchListOk.do" onsubmit="return formCheck()"> -->
+				<form id="frm" name="frm" method="post" action="" onsubmit="return formCheck()"> <!-- 테스트용 -->
 				<div class="card" id="card1-cell">
 					<div class="card-header">
 						<h6 class="card-title">
@@ -36,10 +145,9 @@
 						<div class="row ">
 							<div class="col-md-1 pt-3 row-st">검색어</div> 
 							<div class="col-md-2 pt-2 row-st">
-								<select class="custom-select row-st" name="category1"> 
+								<select class="custom-select row-st" name="sw_1"> 
 									<option value="goods_name" selected >상품명</option>
-									<option value="goods_id">상품번호</option>
-									<option value="order_id">주문번호</option>
+									<option value="goods_id">상품번호</option>									
 									<option value="sle_id">판매번호</option>
 								</select>
 							</div> 
@@ -58,14 +166,14 @@
 						<div class="row ">
 							<div class="col-md-1 row-st" style="padding-top:15px">검색기간</div>
 							<div class="col-md-4 pt-1 row-st" >
-								<button type="button" class="btn btn-primary btn-sm">오늘</button>											
+											<button type="button" class="btn btn-primary btn-sm" id="day" name="day">오늘</button>											
 											<button type="button" class="btn btn-primary btn-sm" id="t_day" name="t_day">3일</button>
 											<button type="button" class="btn btn-primary btn-sm" id="s_day" name="s_day">7일</button>
 											<button type="button" class="btn btn-primary btn-sm" id="o_mon" name="o_mon">1개월</button>
 											<button type="button" class="btn btn-primary btn-sm" id="t_mon" name="t_mon">3개월</button>
 											<button type="button" class="btn btn-primary btn-sm" id="s_mon" name="s_mon">6개월</button>
-											<button type="button" class="btn btn-primary btn-sm" id="o_yr" name="o_yr">1년</button>																					
-											<button type="button" class="btn btn-primary btn-sm" id="d_all" name="all">전체</button>
+											<button type="button" class="btn btn-primary btn-sm" id="o_year" name="o_year">1년</button>																					
+											<button type="button" class="btn btn-primary btn-sm" id="d_all" name="d_all">전체</button>
 							</div>
 							<!-- datepicker -->
 							<div class="col-md-2 row-st" style="padding-top:8px"> 						
@@ -101,27 +209,40 @@
 							</div>
 						</div>	<!-- 둘째라인 끝 -->
 						<div class="row ">
-							<div class="col-md-1 pt-2 row-st">등록시간</div>
+							<div class="col-md-1 pt-2 row-st">판매등록시간</div>
 							<div class="col-md-2 row-st">
 								<select class="custom-select" id="rTime" name="rTime">
 											<option selected>시간 선택</option>
-											<option value="13:00">13:00</option>
-											<option value="14:00">14:00</option>
-											<option value="15:00">15:00</option>
-											<option value="16:00">16:00</option>
-											<option value="17:00">17:00</option>
-											<option value="18:00">18:00</option>										
+											<option value="13">13:00</option>
+											<option value="14">14:00</option>
+											<option value="15">15:00</option>
+											<option value="16">16:00</option>
+											<option value="17">17:00</option>
+											<option value="18">18:00</option>
+											<option value="18">18:00</option>
+											<option value="19">19:00</option>
+											<option value="20">20:00</option>
+											<option value="21">21:00</option>
+											<option value="22">22:00</option>
+											<option value="23">23:00</option>										
+											<option value="24">24:00</option>
 								</select>
 							</div>
 							<div class="col-md-3 row-st"></div>
 							<div class="col-md-1 pt-2 row-st" >판매종료시간</div>
 							<div class="col-md-2 ml-2 row-st">
 								<select class="custom-select" id="eTime" name="eTime">
-										<option selected>시간 선택</option>
-										<option></option>
-										<option></option>
-										<option></option>
-										<option></option>
+										<option selected>시간 선택</option>											
+											<option value="16">16:00</option>
+											<option value="17">17:00</option>
+											<option value="18">18:00</option>
+											<option value="18">18:00</option>
+											<option value="19">19:00</option>
+											<option value="20">20:00</option>
+											<option value="21">21:00</option>
+											<option value="22">22:00</option>
+											<option value="23">23:00</option>										
+											<option value="24">24:00</option>
 								</select>
 							</div>
 							
@@ -130,39 +251,39 @@
 							<div class="col-md-1 pt-3 row-st">판매상태</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck1">
-								  <label class="custom-control-label" for="customCheck1">전체</label>
+								  <input type="checkbox" class="custom-control-input" id="s_all" name="s_all" value="">
+								  <label class="custom-control-label" for="s_all">전체</label>
 								</div>
 							</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck2">
-								  <label class="custom-control-label" for="customCheck2">판매중</label>
+								  <input type="checkbox" class="custom-control-input" id="s_onSale" name="s_onSale" value="">
+								  <label class="custom-control-label" for="s_onSale">판매중</label>
 								</div>
 
 							</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck3">
-								  <label class="custom-control-label" for="customCheck3">판매중단</label>
+								  <input type="checkbox" class="custom-control-input" id="s_cancel" name="s_cancel" value="C">
+								  <label class="custom-control-label" for="s_cancel">판매중단</label>
 								</div>
 							</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck4">
-								  <label class="custom-control-label" for="customCheck4">판매완료</label>
+								  <input type="checkbox" class="custom-control-input" id="s_complete" name="s_complete" value="A_P">
+								  <label class="custom-control-label" for="s_complete">판매완료</label>
 								</div>
 							</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck5">
-								  <label class="custom-control-label" for="customCheck5">부분판매</label>
+								  <input type="checkbox" class="custom-control-input" id="s_part" name="s_part" value="P">
+								  <label class="custom-control-label" for="s_part">부분판매</label>
 								</div>
 							</div>
 							<div class="col-md-1 row-st">
 								<div class="custom-control custom-checkbox">
-								  <input type="checkbox" class="custom-control-input" id="customCheck6">
-								  <label class="custom-control-label" for="customCheck6">완전판매</label>
+								  <input type="checkbox" class="custom-control-input" id="s_soldOut" name="s_soldOut" value="A">
+								  <label class="custom-control-label" for="s_soldOut">완전판매</label>
 								</div>
 
 							</div>
