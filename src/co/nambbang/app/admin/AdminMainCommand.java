@@ -29,11 +29,11 @@ public class AdminMainCommand implements Command {
 		int cnt = dto.getUserCnt() + dto.getSelerCnt();		
 		dto.setCustomerCnt(cnt);
 		
-		request.setAttribute("dto", dto);
-		request.setAttribute("list", list);
+		request.setAttribute("dto", dto); // 메인 화면 카운트 데이터
+		request.setAttribute("list", list); // 공지사항 데이터 
 		
 		
-		String path = "/adminMain.jsp";
+		String path = "/examples/adminMain.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(path);
 		dispatcher.forward(request, response);
 

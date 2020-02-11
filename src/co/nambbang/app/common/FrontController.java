@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.nambbang.app.admin.AdminMainCommand;
 import co.nambbang.app.admin.AdminMerchListCommand;
+import co.nambbang.app.admin.AdminMerchListModifyCommand;
 import co.nambbang.app.admin.AdminMerchListOkCommand;
 
 @WebServlet("*.do") // 
@@ -24,10 +25,12 @@ public class FrontController extends HttpServlet {
 	}
 
 	public void init(ServletConfig config) throws ServletException {
-
+		cont.put("/", new AdminMainCommand());	//admin 메인 페이지
 		cont.put("/AdminMain.do", new AdminMainCommand());	//admin 메인 페이지
-		cont.put("/AdminMerchList.do", new AdminMerchListCommand()); // admin 상품목록관리 페이지
-		cont.put("/AdminMerchListOk.do", new AdminMerchListOkCommand()); //admin 상품목록관리 검색
+		cont.put("/AdminMerchList.do", new AdminMerchListCommand()); // admin 상품목록관리 페이지 리다이렉트
+		cont.put("/AdminMerchListOk.do", new AdminMerchListOkCommand()); //admin 상품목록관리 검색 1
+		cont.put("/AdminMerchListModify.do", new AdminMerchListModifyCommand()); //admin 상품목록관리 리스트 상태 변경
+		
 	
 	}
 
@@ -61,7 +64,7 @@ public class FrontController extends HttpServlet {
 				}
 			}
 		} else {
-			response.getWriter().append("잘못된 요청입니다.");
+			
 		}
 	}
 }

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +30,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">주문</p>                      
-                      <p class="card-title">총 0건<br>0원<p>
+                      <p class="card-title">총 ${dto.orderCnt}건<br>${dto.orderSum }원<p>
                     </div>
                   </div>
                 </div>
@@ -54,7 +55,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">결제</p>
-                      <p class="card-title">총 0건<br>0원<p>
+                      <p class="card-title">총 ${dto.setleCnt }건<br>${dto.setleSum }원<p>
                     </div>
                   </div>
                 </div>
@@ -79,7 +80,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">판매 취소</p>
-                      <p class="card-title">총 0건 <br>0원
+                      <p class="card-title">총 ${dto.goodsCanclCnt }건 <br>${dto.goodsCanclSum }원
                         <p>
                     </div>
                   </div>
@@ -105,7 +106,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">환불</p>
-                      <p class="card-title">총 0건 <br> 0원
+                      <p class="card-title">총 ${dto.refundCnt }건 <br> ${dto.refundSum }원
                         <p>
                     </div>
                   </div>
@@ -134,7 +135,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">전체등록상품</p>                      
-                      <p class="card-title">0건<p>
+                      <p class="card-title">${dto.goodsCnt }건<p>
                     </div>
                   </div>
                 </div>
@@ -160,7 +161,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">판매중인 판매자</p>                      
-                      <p class="card-title">0명<p>
+                      <p class="card-title">${dto.sellingSeler }명<p>
                     </div>
                   </div>
                 </div>
@@ -186,7 +187,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">판매종료 임박 상품</p>                      
-                      <p class="card-title">0건<p>
+                      <p class="card-title">${dto.overGoods }건<p>
                     </div>
                   </div>
                 </div>
@@ -213,7 +214,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">사용자</p>
-                      <p class="card-title">0명
+                      <p class="card-title">${dto.userCnt }명
                         <p>
                     </div>
                   </div>
@@ -239,7 +240,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">판매자</p>
-                      <p class="card-title">0명
+                      <p class="card-title">${dto.selerCnt }명
                         <p>
                     </div>
                   </div>
@@ -265,7 +266,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">총 고객수</p>
-                      <p class="card-title">0명
+                      <p class="card-title">${dto.customerCnt }명
                         <p>
                     </div>
                   </div>
@@ -316,76 +317,21 @@
                 <div class="table-responsive" style="overflow: hidden">
                   <table class="table">
                     <thead class=" text-primary">
-                      <th>
-                        Name
-                      </th>
-                      <th>
-                        Country
-                      </th>
-                      <th>
-                        City
-                      </th>
-                      <th class="text-right">
-                        Salary
-                      </th>
+                      <th class="text-center">번호</th>
+                      <th class="text-center">제목</th>
+                      <th class="text-center">작성일</th>
+                      <th class="text-center">조회수</th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          Dakota Rice
-                        </td>
-                        <td>
-                          Niger
-                        </td>
-                        <td>
-                          Oud-Turnhout
-                        </td>
-                        <td class="text-right">
-                          $36,738
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Minerva Hooper
-                        </td>
-                        <td>
-                          Curaçao
-                        </td>
-                        <td>
-                          Sinaai-Waas
-                        </td>
-                        <td class="text-right">
-                          $23,789
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Sage Rodriguez
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          Baileux
-                        </td>
-                        <td class="text-right">
-                          $56,142
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Philip Chaney
-                        </td>
-                        <td>
-                          Korea, South
-                        </td>
-                        <td>
-                          Overland Park
-                        </td>
-                        <td class="text-right">
-                          $38,735
-                        </td>
-                      </tr>
+                    	<!--td 클릭시 상세내용 조회뷰 만들어야함 -->                    
+                      <c:forEach var="notice" items="${list }">
+						<tr class="text-center">
+							<td>${notice.nNo }</td>
+							<td>${notice.nSj }</td>
+							<td>${notice.nDe }</td>
+							<td>${notice.nCnt }</td>
+						</tr>
+					  </c:forEach>
                     </tbody>
                   </table>
                 </div>
